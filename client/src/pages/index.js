@@ -201,14 +201,10 @@ class App extends React.Component {
                       
                     </Box>
                   : <Box>
-                      <h3>Seems you haven't install any crypto wallet yet, press below button to connect.</h3>
-                        {
-                          hasSaleStarted
-                            ? <Button onClick={this.onClickConnect}>
-                                CONNECT
-                              </Button>
-                            : <Button>PRESALE STARTED ON 15.05</Button>
-                        }
+                      <h3>Seems you haven't install any crypto wallet yet, we support multiple wallets, ranging from MetaMask to Rainbow. Press below button to connect.</h3>
+                        <Button onClick={this.onClickConnect}>
+                          CONNECT
+                        </Button>
                     </Box>
               }
             </Modal>
