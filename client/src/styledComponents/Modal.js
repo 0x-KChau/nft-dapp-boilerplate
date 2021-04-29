@@ -7,11 +7,18 @@ const Div = styled(Box)`
     width: 100%;
     bottom: 20px;
     background-color: #f2f2f2;
-    border: 4px solid #000;
-    box-shadow: 8px 8px 0 #000;
+    border: 4px solid #151313;
+    box-shadow: 8px 8px 0 #2d2a2a;
     padding: 16px 20px;
 
+    & > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
     & > button {
+        background-color: #211f1f;
     }
 
 `;

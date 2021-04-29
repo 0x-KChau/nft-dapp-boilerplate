@@ -4,7 +4,6 @@ import styled from 'styled-components';
 
 const Div = styled(Box)`
   flex-direction: column;
-  max-width: 80%;
 
   & > img {
     margin: 3% 0;
@@ -18,11 +17,12 @@ const Div = styled(Box)`
     line-height: 2;
   }
 
-  & > p {
+  & > p, span {
     font-family: monospace;
     font-weight: 500;
     font-size: 18px;
     line-height: 1.5;
+    word-wrap: break-word;
   }
 
   & > h2 {

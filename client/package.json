@@ -10,13 +10,15 @@
     "link-contracts": "cd lib && ln -s ../../build/contracts contracts"
   },
   "dependencies": {
+    "@walletconnect/web3-provider": "^1.4.1",
+    "debug": "^2.6.9",
     "next": "10.1.0",
     "react": "16.11.0",
     "react-dom": "16.11.0",
     "react-scripts": "3.2.0",
     "rebass": "^4.0.7",
     "styled-components": "^5.2.3",
-    "web3": "1.2.2"
+    "web3": "^1.2.2"
   },
   "resolutions": {
     "styled-components": "^5"
