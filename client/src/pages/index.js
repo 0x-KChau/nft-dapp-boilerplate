@@ -1,4 +1,5 @@
 import React from 'react'
+import NextImage from 'next/image'
 import Link from 'next/link'
 import Debug from 'debug';
 import { Box, Button } from 'rebass/styled-components';
@@ -6,7 +7,6 @@ import { Container, Content, Modal, Input } from '../styledComponents'
 import { Image } from 'rebass/styled-components'
 import Web3Container from '../lib/Web3Container'
 import { connectWallet } from '../lib/walletConnector';
-
 const debug = Debug('web:connection.context');
 
 const coverImg = 'https://nekonft.io/static/banner-768x256-5d5bf2f1b641e30fa4d14ce800526f48.gif'
@@ -148,10 +148,9 @@ class App extends React.Component {
           <h2>BOXING DAY (15.06.21)</h2>
           <p>Although Christmas is yet to come, the SHIBAs boxing day is coming soon. 15th of June is the first big day, all sold hidden SHIBA NFTs will be revealed on that day.</p>
 
-          <p>This project hugely inspired by a number of successful projects, especially NEKO, Pixils, and Chubbies. A 2D pixel-like style and animated GIF are the key elements, which I will keep those features in this project.</p>
-
           <h2>PROVENANCE</h2>
           <p>As an NFT project, a final proof is hardcoded in our ERC-721 smart contract. The proof is a root hash of all the 1,000 SHIBAs image hashes using the SHA-256 algorithm concatenated in sequential order of their IDs. It assures immutability. No one will be able to mess with the original images without notice.</p>
+          <p>This project hugely inspired by a number of successful projects, especially NEKO, Pixils, and Chubbies. A 2D pixel-like style and animated GIF are the key elements, which I will keep those features in this project.</p>
 
           <h2>ABOUT ME</h2>
           <p>A new DEFI guy who has passtionate in tech, and belives blockchain will eventually disrupt all existing market and bring innovation to the new market.</p>
@@ -217,7 +216,23 @@ class App extends React.Component {
 
 export default () => (
   <Web3Container
-    renderLoading={() => <div>Loading Dapp Page...</div>}
+    renderLoading={() => (
+      <Box
+        width={['100%']}
+        p={3}
+        mt={3}
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+        }}
+      >
+        <NextImage
+          src="/images/egg.gif"
+          alt="egg"
+          width="250" height="250"
+        />
+        </Box>
+    )}
     render={({ web3, accounts, contract }) => (
       <App accounts={accounts} contract={contract} web3={web3} />
     )}
