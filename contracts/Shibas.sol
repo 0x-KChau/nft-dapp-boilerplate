@@ -35,7 +35,7 @@ contract Shibas is ERC721EnumerableNew, Ownable {
     }
 
     function calculatePrice() public view returns (uint) {
-        require(hasSaleStarted, "Sale hasn't started");
+        // require(hasSaleStarted, "Sale hasn't started");
         return calculatePriceForToken(totalSupply());
     }
 

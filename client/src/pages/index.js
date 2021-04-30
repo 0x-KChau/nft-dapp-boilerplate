@@ -7,7 +7,13 @@ import { Container, Content, Modal, Input } from '../styledComponents'
 import { Image } from 'rebass/styled-components'
 import Web3Container from '../lib/Web3Container'
 import { connectWallet } from '../lib/walletConnector';
+
+// initial debug log
 const debug = Debug('web:connection.context');
+
+// check node environment
+const NODE_ENV = process.env.NODE_ENV || 'development';
+const isDev = NODE_ENV === 'development';
 
 const coverImg = 'https://nekonft.io/static/banner-768x256-5d5bf2f1b641e30fa4d14ce800526f48.gif'
 
@@ -37,7 +43,9 @@ class App extends React.Component {
     return { shibaKept, totalSupply, hasSaleStarted };
   }
 
-  onClickConnect = async () => {
+  onClickConnect = async (e) => {
+    e.preventDefault();
+
     try {
       //  Enable session (triggers QR Code modal)
       const { accounts, contract, web3 } = await connectWallet();
@@ -51,7 +59,27 @@ class App extends React.Component {
     }
   }
 
-  onClickBuy = async () => {
+  onClickStartSale = async (e) => {
+    e.preventDefault();
+
+    if (isDev) {
+      try {
+        const { contract } = this.state;
+  
+        const res = await contract.methods.startSale().call();
+        console.log('res', res);
+  
+        this.setState({ hasSaleStarted: true });
+  
+      } catch (error) {
+        debug('onClickStartSale: ', error);
+      }
+    }
+  }
+
+  onClickBuy = async (e) => {
+    e.preventDefault();
+    
     const { contract, accounts, web3, numShibas } = this.state;
     const price = this.calShibaPrice();
     const value = (price * numShibas).toString();
@@ -67,6 +95,7 @@ class App extends React.Component {
 
   onChangeInput = e => {
     e.preventDefault();
+
     const numShibas = e.target.value;
     this.setState({ numShibas });
   }
@@ -148,6 +177,18 @@ class App extends React.Component {
           <h2>BOXING DAY (15.06.21)</h2>
           <p>Although Christmas is yet to come, the SHIBAs boxing day is coming soon. 15th of June is the first big day, all sold hidden SHIBA NFTs will be revealed on that day.</p>
 
+          <h2>PROPERTIES</h2>
+          <ul>
+            <li>Head</li>
+            <li>Body</li>
+            <li>Leg</li>
+            <li>Tail</li>
+            <li>Props</li>
+            <li>Costume</li>
+            <li>Accessories</li>
+            <li>Background</li>
+          </ul>
+
           <h2>PROVENANCE</h2>
           <p>As an NFT project, a final proof is hardcoded in our ERC-721 smart contract. The proof is a root hash of all the 1,000 SHIBAs image hashes using the SHA-256 algorithm concatenated in sequential order of their IDs. It assures immutability. No one will be able to mess with the original images without notice.</p>
           <p>This project hugely inspired by a number of successful projects, especially NEKO, Pixils, and Chubbies. A 2D pixel-like style and animated GIF are the key elements, which I will keep those features in this project.</p>
@@ -195,7 +236,7 @@ class App extends React.Component {
                           ? <Button onClick={this.onClickBuy}>
                               BUY
                             </Button>
-                          : <Button>PRESALE STARTED ON 15.05</Button>
+                          : <Button onClick={this.onClickStartSale}>PRESALE STARTED ON 15.05</Button>
                       }
                       
                     </Box>

@@ -11,7 +11,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "truffle migrate --network",
+    "etherscan": "truffle run verify Shibas --network"
   },
   "author": "YingYang.master",
   "license": "ISC"
