@@ -8,7 +8,7 @@ const provider = new WalletConnectProvider({
   rpc: {
     31337: 'http://127.0.0.1:8545',
     3: 'https://eth-ropsten.alchemyapi.io',
-    4: 'https://eth-rinkeby.alchemyapi.io',
+    4: 'https://www.rinkeby.io',
   },
 });
 
