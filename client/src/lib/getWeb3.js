@@ -5,7 +5,7 @@ const debug = Debug('web:connection.context');
 const resolveWeb3 = async (resolve) => {
   let { web3 } = window
   const alreadyInjected = typeof web3 !== 'undefined' // i.e. Mist/Metamask
-  const localProvider = `http://localhost:8545`
+  // const localProvider = `http://localhost:8545`
 
   if (alreadyInjected) {
     web3 = new Web3(web3.currentProvider)

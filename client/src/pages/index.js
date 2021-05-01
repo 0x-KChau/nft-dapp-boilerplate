@@ -3,7 +3,7 @@ import NextImage from 'next/image'
 import Link from 'next/link'
 import Debug from 'debug';
 import { Box, Button } from 'rebass/styled-components';
-import { Container, Content, Modal, Input } from '../styledComponents'
+import { Container, Content, Modal, Input, DialogBox } from '../styledComponents'
 import { Image } from 'rebass/styled-components'
 import Web3Container from '../lib/Web3Container'
 import { connectWallet } from '../lib/walletConnector';
@@ -27,13 +27,15 @@ class App extends React.Component {
     shibaKept: null,
     totalSupply: null,
     hasSaleStarted: false,
+    isToggleDialogBox: false,
+    isButtonLoading: false,
     numShibas: 1,
   };
 
   async componentDidMount() {
     const { accounts, contract, web3 } = this.props;
-    const { shibaKept, totalSupply } = await this._loadContractProperties(contract);
-    this.setState({ accounts, contract, web3, shibaKept, totalSupply });
+    const { shibaKept, totalSupply, hasSaleStarted } = await this._loadContractProperties(contract);
+    this.setState({ accounts, contract, web3, shibaKept, totalSupply, hasSaleStarted });
   }
 
   _loadContractProperties = async (contract) => {
@@ -43,8 +45,13 @@ class App extends React.Component {
     return { shibaKept, totalSupply, hasSaleStarted };
   }
 
+  _unMount = () => {
+    this.setState({ isToggleDialogBox: false, isButtonLoading: false });
+  }
+
   onClickConnect = async (e) => {
     e.preventDefault();
+    this.setState({ isButtonLoading: true })
 
     try {
       //  Enable session (triggers QR Code modal)
@@ -52,33 +59,41 @@ class App extends React.Component {
       
       const { shibaKept, totalSupply } = await this._loadContractProperties(contract);
 
-      this.setState({ accounts, contract, web3, shibaKept, totalSupply });
+      this.setState({ accounts, contract, web3, shibaKept, totalSupply, isButtonLoading: false });
 
     } catch (error) {
       debug('walletConnector connect: ', error);
+      this._unMount();
     }
   }
 
   onClickStartSale = async (e) => {
     e.preventDefault();
+    this.setState({ isButtonLoading: true })
 
     if (isDev) {
       try {
-        const { contract } = this.state;
-  
-        const res = await contract.methods.startSale().call();
-        console.log('res', res);
-  
-        this.setState({ hasSaleStarted: true });
+        const { contract, accounts } = this.state;
+        
+        const res = await contract.methods.startSale().send({ from: accounts[0] });
+        
+        if (res.status) {
+          const { shibaKept, totalSupply, hasSaleStarted } = await this._loadContractProperties(contract);
+          this.setState({ hasSaleStarted, shibaKept, totalSupply });
+        }
+        
+        this.setState({ isButtonLoading: false });
   
       } catch (error) {
         debug('onClickStartSale: ', error);
+        this._unMount();
       }
     }
   }
 
   onClickBuy = async (e) => {
     e.preventDefault();
+    this.setState({ isButtonLoading: true })
     
     const { contract, accounts, web3, numShibas } = this.state;
     const price = this.calShibaPrice();
@@ -87,8 +102,19 @@ class App extends React.Component {
     try {
       const res = await contract.methods.adoptShibas(numShibas).send({from: accounts[0], value: web3.utils.toWei(value, "ether")});
       console.log('res', res);
+
+      if (res.status) {
+        const { shibaKept, totalSupply } = await this._loadContractProperties(contract);
+        this.setState({ shibaKept, totalSupply, isToggleDialogBox: true });
+      }
+
+      window.setTimeout(() => {
+        this._unMount();
+      }, 5000)
+
     } catch (error) {
       debug('onClickBuy: ', error);
+      this._unMount();
     }
 
   }
@@ -122,7 +148,7 @@ class App extends React.Component {
   }
 
   render () {
-    const { shibaKept, numShibas, hasSaleStarted, totalSupply, accounts, contract, web3 } = this.state;
+    const { isButtonLoading, isToggleDialogBox, shibaKept, numShibas, hasSaleStarted, totalSupply, accounts, contract, web3 } = this.state;
 
     return (
       <Container>
@@ -157,12 +183,12 @@ class App extends React.Component {
           </ol>
 
           <h2>PRICING</h2>
-          <p>In order to reward the early supportive backer, #010 - #100 and #101 - #200 will be valued at 0.02 ETH and 0.04 ETH repectively.</p>
+          <p>In order to reward the early supportive backer, the first #100 and #200 will be valued at 0.02 ETH and 0.04 ETH repectively.</p>
           <p>Moreover, the one and only special background named flying to the moon, will be randomly appeared on 10 units of SHIBAs among the first 100  units. The earliest you bought, the higher chance to get the special SHIBAs.</p>
           
           <ul>
-            <li>#000 - #009: Reserved for people who helped along the way</li>
-            <li>#010 - #100: 0.02 ETH</li>
+            <li>#000 - #019: Reserved for people who helped along the way</li>
+            <li>#020 - #100: 0.02 ETH</li>
             <li>#101 - #200: 0.04 ETH</li>
             <li>#201 - #400: 0.08 ETH</li>
             <li>#401 - #600: 0.16 ETH</li>
@@ -177,11 +203,11 @@ class App extends React.Component {
           <h2>BOXING DAY (15.06.21)</h2>
           <p>Although Christmas is yet to come, the SHIBAs boxing day is coming soon. 15th of June is the first big day, all sold hidden SHIBA NFTs will be revealed on that day.</p>
 
-          <h2>PROPERTIES</h2>
+          <h2>SHIBAs PROPERTIES</h2>
           <ul>
-            <li>Head</li>
-            <li>Body</li>
-            <li>Leg</li>
+            <li>Shiba Type</li>
+            <li>Headware</li>
+            <li>Bodyware</li>
             <li>Tail</li>
             <li>Props</li>
             <li>Costume</li>
@@ -233,21 +259,29 @@ class App extends React.Component {
                       
                       {
                         hasSaleStarted
-                          ? <Button onClick={this.onClickBuy}>
+                          ? <Button onClick={this.onClickBuy} disabled={isButtonLoading} variant={isButtonLoading ? 'disabled' : 'primary'}>
                               BUY
                             </Button>
-                          : <Button onClick={this.onClickStartSale}>PRESALE STARTED ON 15.05</Button>
+                          : <Button onClick={this.onClickStartSale} disabled={isButtonLoading} variant={isButtonLoading ? 'disabled' : 'primary'}>PRESALE STARTED ON 15.05</Button>
                       }
                       
                     </Box>
                   : <Box>
                       <h3>Seems you haven't install any crypto wallet yet, we support multiple wallets, ranging from MetaMask to Rainbow. Press below button to connect.</h3>
-                        <Button onClick={this.onClickConnect}>
+                        <Button onClick={this.onClickConnect} disabled={isButtonLoading} variant={isButtonLoading ? 'disabled' : 'primary'}>
                           CONNECT
                         </Button>
                     </Box>
               }
             </Modal>
+
+            {
+              isToggleDialogBox && (
+                <DialogBox>
+                  <h4>Congrats, buy & keep our adorable SHIBA successfully!</h4>
+                </DialogBox>
+              )
+            }
         </Content>
       </Container>
     )

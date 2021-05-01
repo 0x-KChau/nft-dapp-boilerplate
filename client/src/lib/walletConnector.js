@@ -2,14 +2,14 @@ import Web3 from 'web3'
 import WalletConnectProvider from '@walletconnect/web3-provider';
 import contractShibas from './contracts/Shibas.json'
 
-console.log('process.env.PROJECTID', process.env.PROJECTID)
-
 //  Create WalletConnect Provider
 const provider = new WalletConnectProvider({
-  infuraId: process.env.PROJECTID,
-  // rpc: {
-  //   31337: 'http://127.0.0.1:8545',
-  // },
+  // infuraId: process.env.PROJECTID,
+  rpc: {
+    31337: 'http://127.0.0.1:8545',
+    3: 'https://eth-ropsten.alchemyapi.io',
+    4: 'https://eth-rinkeby.alchemyapi.io',
+  },
 });
 
 export const connectWallet = async () => {

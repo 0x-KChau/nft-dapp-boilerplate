@@ -8,6 +8,7 @@ export const theme = {
       secondary: '#ff5446',
       muted: '#f6f6f9',
       gray: '#dddddf',
+      darkGray: '#acacb5',
       highlight: 'hsla(205, 100%, 40%, 0.125)',
     },
     fonts: {
@@ -113,6 +114,11 @@ export const theme = {
         color: 'background',
         bg: 'secondary',
       },
+      disabled: {
+        variant: 'buttons.primary',
+        color: 'gray',
+        bg: 'darkGray',
+      }
     },
     styles: {
       root: {
