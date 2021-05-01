@@ -35,7 +35,7 @@ contract Shibas is ERC721EnumerableNew, Ownable {
     }
 
     function calculatePrice() public view returns (uint) {
-        // require(hasSaleStarted, "Sale hasn't started");
+        require(hasSaleStarted, "Sale hasn't started");
         return calculatePriceForToken(totalSupply());
     }
 
@@ -95,7 +95,7 @@ contract Shibas is ERC721EnumerableNew, Ownable {
     // #0 - #10: Reserved for giveaways and people who helped along the way
     function reserveGiveaway(uint numShibas) public onlyOwner {
         uint currentSupply = totalSupply();
-        require(currentSupply + numShibas <= 10, "Exceeded giveaway limit");
+        require(currentSupply + numShibas <= 20, "Exceeded giveaway limit");
         for (uint index = 0; index < numShibas; index++) {
             _safeMint(owner(), currentSupply + index);
         }

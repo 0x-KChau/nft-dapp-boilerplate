@@ -8,7 +8,7 @@ const options = {
   mnemonic: {
     phrase: process.env.MNEMONIC
   },
-  numberOfAddresses: 1,
+  numberOfAddresses: 4,
   shareNonce: true,
 }
 
@@ -36,12 +36,13 @@ module.exports = {
       timeoutBlocks: 50000,
       networkCheckTimeout: 1000000
     },
-    ropsten_infura: {
+    ropsten: {
       provider: function() {
         return new HDWalletProvider(
           {
             ...options,
-            providerOrUrl: `wss://ropsten.infura.io/ws/v3/${process.env.PROJECTID}`,
+            providerOrUrl: `wss://eth-ropsten.ws.alchemyapi.io/v2/${process.env.ROPSTENID}`,//`wss://ropsten.infura.io/ws/v3/${process.env.PROJECTID}`,
+            chainId: 3
           }
         )
       },
@@ -49,7 +50,22 @@ module.exports = {
       websockets: true,
       timeoutBlocks: 50000,
       networkCheckTimeout: 1000000
-    }
+    },
+    rinkeby: {
+      provider: function() {
+        return new HDWalletProvider(
+          {
+            ...options,
+            providerOrUrl: `wss://eth-rinkeby.ws.alchemyapi.io/v2/${process.env.RINKEBY}`,
+            chainId: 4
+          }
+        )
+      },
+      network_id: 4,
+      websockets: true,
+      timeoutBlocks: 50000,
+      networkCheckTimeout: 1000000
+    },
   },
   compilers: {
     solc: {

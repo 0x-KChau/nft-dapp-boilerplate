@@ -9,7 +9,9 @@
     "chai-bn": "^0.2.0",
     "dotenv": "^8.2.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "truffle-plugin-verify": "^0.5.7"
+  },
   "scripts": {
     "deploy": "truffle migrate --network",
     "etherscan": "truffle run verify Shibas --network"
