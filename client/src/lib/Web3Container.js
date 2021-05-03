@@ -13,10 +13,13 @@ export default class Web3Container extends React.Component {
     try {
       const web3 = await getWeb3()
 
+      console.log('web3', web3)
+
       if (web3) {
         const accounts = await web3.eth.getAccounts()
         const contract = await getContract(web3, contractShibas)
         this.setState({ web3, accounts, contract })
+        console.log('web3, accounts, contract', web3, accounts, contract)
       }
 
       this.setState({ loading: false })
