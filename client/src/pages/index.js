@@ -37,7 +37,7 @@ class App extends React.Component {
     const { shibaKept, totalSupply, hasSaleStarted } = await this._loadContractProperties(contract);
     this.setState({ accounts, contract, web3, shibaKept, totalSupply, hasSaleStarted });
 
-    console.log('walletconnect', window.localStorage.getItem('walletconnect')))
+    console.log('walletconnect', window.localStorage.getItem('walletconnect'));
   }
 
   _loadContractProperties = async (contract) => {
