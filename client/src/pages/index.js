@@ -36,6 +36,8 @@ class App extends React.Component {
     const { accounts, contract, web3 } = this.props;
     const { shibaKept, totalSupply, hasSaleStarted } = await this._loadContractProperties(contract);
     this.setState({ accounts, contract, web3, shibaKept, totalSupply, hasSaleStarted });
+
+    console.log('walletconnect', window.localStorage.getItem('walletconnect')))
   }
 
   _loadContractProperties = async (contract) => {
@@ -267,7 +269,7 @@ class App extends React.Component {
                       
                     </Box>
                   : <Box>
-                      <h3>Seems you haven't install any crypto wallet yet, we support multiple wallets, ranging from MetaMask to Rainbow. Press below button to connect.</h3>
+                      <h3>Detected no crypto wallet connected. Please visit us on Seems you haven't install any crypto wallet yet, we support multiple wallets, ranging from MetaMask to Rainbow. Press below button to connect.</h3>
                         <Button onClick={this.onClickConnect} disabled={isButtonLoading} variant={isButtonLoading ? 'disabled' : 'primary'}>
                           CONNECT
                         </Button>
