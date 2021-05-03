@@ -37,7 +37,9 @@ class App extends React.Component {
     const { shibaKept, totalSupply, hasSaleStarted } = await this._loadContractProperties(contract);
     this.setState({ accounts, contract, web3, shibaKept, totalSupply, hasSaleStarted });
 
-    console.log('walletconnect', window.localStorage.getItem('walletconnect'));
+    const walletconnect = await JSON.parse(localStorage.getItem('walletconnect'));
+    console.log('walletconnect', walletconnect);
+
   }
 
   _loadContractProperties = async (contract) => {
@@ -52,8 +54,11 @@ class App extends React.Component {
   }
 
   onClickConnect = async (e) => {
-    // e.preventDefault();
+    e.preventDefault();
     this.setState({ isButtonLoading: true })
+
+    const walletconnect = await JSON.parse(localStorage.getItem('walletconnect'));
+    console.log('walletconnect', walletconnect);
 
     try {
       //  Enable session (triggers QR Code modal)
@@ -271,7 +276,7 @@ class App extends React.Component {
                     </Box>
                   : <Box>
                       <h3>Detected no crypto wallet connected. Please visit us on Seems you haven't install any crypto wallet yet, we support multiple wallets, ranging from MetaMask to Rainbow. Press below button to connect.</h3>
-                        <Button onClick={this.onClickConnect} disabled={isButtonLoading} variant={isButtonLoading ? 'disabled' : 'primary'}>
+                        <Button onClick={this.onClickConnect} variant={isButtonLoading ? 'disabled' : 'primary'}>
                           CONNECT
                         </Button>
                     </Box>
