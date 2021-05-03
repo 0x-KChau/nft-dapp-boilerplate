@@ -36,10 +36,6 @@ class App extends React.Component {
     const { accounts, contract, web3 } = this.props;
     const { shibaKept, totalSupply, hasSaleStarted } = await this._loadContractProperties(contract);
     this.setState({ accounts, contract, web3, shibaKept, totalSupply, hasSaleStarted });
-
-    const walletconnect = await JSON.parse(localStorage.getItem('walletconnect'));
-    console.log('walletconnect', walletconnect);
-
   }
 
   _loadContractProperties = async (contract) => {
@@ -57,17 +53,13 @@ class App extends React.Component {
     e.preventDefault();
     this.setState({ isButtonLoading: true })
 
-    const walletconnect = await JSON.parse(localStorage.getItem('walletconnect'));
-    console.log('walletconnect', walletconnect);
-
     try {
       //  Enable session (triggers QR Code modal)
       const { accounts, contract, web3 } = await connectWallet();
-      console.log('accounts, contract, web3', accounts, contract, web3)
       
-      const { shibaKept, totalSupply } = await this._loadContractProperties(contract);
+      const { shibaKept, totalSupply, hasSaleStarted } = await this._loadContractProperties(contract);
 
-      this.setState({ accounts, contract, web3, shibaKept, totalSupply, isButtonLoading: false });
+      this.setState({ accounts, contract, web3, shibaKept, totalSupply, hasSaleStarted, isButtonLoading: false });
 
     } catch (error) {
       debug('walletConnector connect: ', error);
@@ -77,9 +69,10 @@ class App extends React.Component {
 
   onClickStartSale = async (e) => {
     e.preventDefault();
-    this.setState({ isButtonLoading: true })
 
     if (isDev) {
+      this.setState({ isButtonLoading: true });
+
       try {
         const { contract, accounts } = this.state;
         
@@ -109,7 +102,6 @@ class App extends React.Component {
 
     try {
       const res = await contract.methods.adoptShibas(numShibas).send({from: accounts[0], value: web3.utils.toWei(value, "ether")});
-      console.log('res', res);
 
       if (res.status) {
         const { shibaKept, totalSupply } = await this._loadContractProperties(contract);
@@ -275,8 +267,8 @@ class App extends React.Component {
                       
                     </Box>
                   : <Box>
-                      <h3>Detected no crypto wallet connected. Please visit us on Seems you haven't install any crypto wallet yet, we support multiple wallets, ranging from MetaMask to Rainbow. Press below button to connect.</h3>
-                        <Button onClick={this.onClickConnect} variant={isButtonLoading ? 'disabled' : 'primary'}>
+                      <h3>Seems no crypto wallet connected yet, we support multiple wallets, ranging from MetaMask to Rainbow. Press below button to connect.</h3>
+                        <Button onClick={this.onClickConnect} disabled={isButtonLoading} variant={isButtonLoading ? 'disabled' : 'primary'}>
                           CONNECT
                         </Button>
                     </Box>

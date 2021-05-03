@@ -22,16 +22,17 @@ module.exports = {
       host: "127.0.0.1",
       network_id: 5777
     },
-    goerli_infura: {
+    mainnet: {
       provider: function() {
-        return new HDWalletProvider({
-          ...options,
-          providerOrUrl: `wss://goerli.infura.io/ws/v3/${process.env.PROJECTID}`,
-        })
+        return new HDWalletProvider(
+          {
+            ...options,
+            providerOrUrl: `wss://eth-mainnet.ws.alchemyapi.io/v2/${process.env.MAINNET_ID}`,
+            chainId: 1
+          }
+        )
       },
-      network_id: 5,
-      gas: 7500000,
-      gasPrice: 100000000, // 0.1 GWEI
+      network_id: 1,
       websockets: true,
       timeoutBlocks: 50000,
       networkCheckTimeout: 1000000
@@ -41,7 +42,7 @@ module.exports = {
         return new HDWalletProvider(
           {
             ...options,
-            providerOrUrl: `wss://eth-ropsten.ws.alchemyapi.io/v2/${process.env.ROPSTENID}`,//`wss://ropsten.infura.io/ws/v3/${process.env.PROJECTID}`,
+            providerOrUrl: `wss://eth-ropsten.ws.alchemyapi.io/v2/${process.env.ROPSTEN_ID}`,
             chainId: 3
           }
         )
@@ -56,7 +57,7 @@ module.exports = {
         return new HDWalletProvider(
           {
             ...options,
-            providerOrUrl: `wss://eth-rinkeby.ws.alchemyapi.io/v2/${process.env.RINKEBY}`,
+            providerOrUrl: `wss://eth-rinkeby.ws.alchemyapi.io/v2/${process.env.RINKEBY_ID}`,
             chainId: 4
           }
         )
