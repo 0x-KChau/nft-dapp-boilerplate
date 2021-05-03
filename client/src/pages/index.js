@@ -52,12 +52,13 @@ class App extends React.Component {
   }
 
   onClickConnect = async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     this.setState({ isButtonLoading: true })
 
     try {
       //  Enable session (triggers QR Code modal)
       const { accounts, contract, web3 } = await connectWallet();
+      console.log('accounts, contract, web3', accounts, contract, web3)
       
       const { shibaKept, totalSupply } = await this._loadContractProperties(contract);
 
