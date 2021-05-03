@@ -19,5 +19,7 @@ export const connectWallet = async () => {
     const accounts = await web3.eth.getAccounts();
     const contract = await getContract(web3, contractShibas);
 
+    console.log('accounts, contract, web3', accounts, contract, web3)
+
     return { accounts, contract, web3 };
 }
