@@ -226,12 +226,25 @@ class App extends React.Component {
           <p>This project hugely inspired by a number of successful projects, especially NEKO, Pixils, and Chubbies. A 2D pixel-like style and animated GIF are the key elements, which I will keep those features in this project.</p>
 
           <h2>ABOUT ME</h2>
-          <NextImage
-            src="/images/profile.png"
-            alt="profile"
-            width="250" height="250"
-          />
-          <p>A new DEFI guy who has passtionate in tech, and belives blockchain will eventually disrupt all existing market and bring innovation to the new market.</p>
+          <Box
+            width={['100%']}
+            sx={{
+              display: 'flex',
+              // justifyContent: 'center',
+            }}
+          >
+            <NextImage
+              src="/images/profile.png"
+              alt="profile"
+              width="180" height="180"
+            />
+            
+            <Box m={3} />
+
+            <p>A new DEFI guy who has passtionate in tech, and belives blockchain will eventually disrupt all existing market and bring innovation to the new market.</p>
+
+          </Box>
+          
 
           <h2>FAQ</h2>
           
