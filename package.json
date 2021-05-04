@@ -7,7 +7,8 @@
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
     "chai-bn": "^0.2.0",
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "i": "^0.3.6"
   },
   "devDependencies": {
     "truffle-plugin-verify": "^0.5.7"
@@ -15,7 +16,8 @@
   "scripts": {
     "deploy": "truffle migrate --network",
     "etherscan": "truffle run verify Shibas --network",
-    "updateOpensea": "node ./lib/updateOpensea.js"
+    "updateOpensea": "node ./lib/updateOpensea.js",
+    "createMetada": "node ./lib/createMetadata.js"
   },
   "author": "YingYang.master",
   "license": "ISC"

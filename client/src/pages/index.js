@@ -182,6 +182,12 @@ class App extends React.Component {
             <li>A special background will be randomly shown in 10 SHIBAs among the first 100 units</li>
           </ol>
 
+          <NextImage
+            src="/images/egg.gif"
+            alt="egg"
+            width="250" height="250"
+          />
+
           <h2>PRICING</h2>
           <p>In order to reward the early supportive backer, the first #100 and #200 will be valued at 0.02 ETH and 0.04 ETH repectively.</p>
           <p>Moreover, the one and only special background named flying to the moon, will be randomly appeared on 10 units of SHIBAs among the first 100  units. The earliest you bought, the higher chance to get the special SHIBAs.</p>
@@ -220,11 +226,26 @@ class App extends React.Component {
           <p>This project hugely inspired by a number of successful projects, especially NEKO, Pixils, and Chubbies. A 2D pixel-like style and animated GIF are the key elements, which I will keep those features in this project.</p>
 
           <h2>ABOUT ME</h2>
+          <NextImage
+            src="/images/profile.png"
+            alt="profile"
+            width="250" height="250"
+          />
           <p>A new DEFI guy who has passtionate in tech, and belives blockchain will eventually disrupt all existing market and bring innovation to the new market.</p>
 
           <h2>FAQ</h2>
-          <h3>Buying NFT for the first time, how can I get started?</h3>
-          <p>Get a MetaMask chrome extension. Load it with ETH through services that allow you to change your money to ETH like Coinbase Pro or PayPal. Finally, click the button on the Sticky banner and approve the transaction on MetaMask. Voila!</p>
+          
+          <h3>What can I get started to buy NFT?</h3>
+          <p>You can either download a crypto wallet in app store or install a browser extension. Deposit with ETH via tools like Coinbase Pro or PayPal. Finally, you can buy the adorable SHIBA NFT as simply as clicking the button on the Sticky banner and approving the transaction!</p>
+
+          <h3>What is the BOXING DAY?</h3>
+          <p>Since all SHIBAs are hidden when the time you bought, they will only be shown up after boxing day. So BOXING DAY is our big day.</p>
+          
+          <h3>Where can I trade my SHIBAs?</h3>
+          <p>SHIBAs are built upon ERC-721 protocol and attached on Etherum Blockchain. So you can trade on all etherurm marketplaces, such as <a href="https://opensea.io/">OpenSea</a>.</p>
+          
+          <h3>What can I do with my SHIBAs?</h3>
+          <p>You are the owner of your unique SHIBAs as the ownership is already marked on the Etherum Blockchain. So you are free to do anything with them.</p>
           
           <Modal
               mb={4}
