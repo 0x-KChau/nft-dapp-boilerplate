@@ -1,6 +1,7 @@
 import React from 'react'
 import NextImage from 'next/image'
 import Link from 'next/link'
+import Head from 'next/head'
 import Debug from 'debug';
 import { Box, Button } from 'rebass/styled-components';
 import { Container, Content, Modal, Input, DialogBox } from '../styledComponents'
@@ -152,12 +153,31 @@ class App extends React.Component {
 
     return (
       <Container>
+        <Head>
+          <title>SHIBA NFT</title>
+          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+          <link
+            href="/static/favicon.png"
+            rel="icon"
+            type="image/png"
+          />
+        </Head>
+
         <Content width={['100%', '90%', '80%', '70%']}>
           <Link href='/'>
             SHIBA NFT
           </Link>
           <h2>ABOUT SHIBA NFT</h2>
-          <p>SHIBA as the name implies, one of the most coolest dog in the universe. This project aims to bring adorable SHIBAs to the Ethereum network with only limited 1000 unit. These 1000 animated SHIBA NFTs are completely unique, rare, and free to buy & sell, yet each can only be owned by one person at a time.</p>
+          <p>Recently a Shiba Land was found in the southern east of Etherum network, there are in total 1000 SHIBAs living there. Similar to Digimon, they are transformed and evolved from a digi-egg.</p>
+
+          <NextImage
+            src="/images/egg.gif"
+            alt="egg"
+            width="250" height="250"
+          />
+
+          {/* <p>No mater who you are, you should heard of diffenet memes about Shiba. She is one of the hottest icon in the internet. As Elon Musk tweeted, "I love dog, and I love meme." Couldn't agree more, so I created these 1000 animated SHIBAs NFT, and bring them to the Etheurm Network. They are adorable, unique, and rare. I can't wait to see how SHIBAs bring fun and joy to all of you.</p> */}
+          <p>SHIBA as the name implies, one of the most coolest doge in the universe. This project aims to bring adorable SHIBAs to the Ethereum network with only limited 1000 unit. These 1000 animated SHIBA NFTs are completely unique, rare, and free to buy & sell, yet each can only be owned by one person at a time.</p>
 
           <Image
             src={coverImg}
@@ -168,29 +188,21 @@ class App extends React.Component {
             }}
           />
 
-          <p>No mater who you are, you should heard of diffenet memes about Shiba. She is one of the hottest icon in the internet. As Elon Musk tweeted, "I love dog, and I love meme." Couldn't agree more, so I created these 1000 animated SHIBAs NFT, and bring them to the Etheurm Network. They are adorable, unique, and rare. I can't wait to see how SHIBAs bring fun and joy to all of you.</p>
-
           <h2>8 THINGS ABOUT SHIBAs</h2>
           <ol>
             <li>Adorable and unique</li>
             <li>Limited 1000 units supply</li>
             <li>Can only be owned by one person at a time</li>
-            <li>Hidden at the time you bought</li>
-            <li>All sold hidden SHIBAs will be unboxed on 15th of June</li>
-            <li>No one knows what SHIBAs look like until boxing day</li>
-            <li>8 different properties making SHIBAs the unique doge ever</li>
+            <li>Hidden inside the digi-egg at the time you bought</li>
+            <li>All sold SHIBAs digi-egg will be hatched out on 15th of June</li>
+            <li>No one knows what SHIBAs look like until incubation day</li>
+            <li>8 different trait types making SHIBAs the unique doge-mon ever</li>
             <li>A special background will be randomly shown in 10 SHIBAs among the first 100 units</li>
           </ol>
 
-          <NextImage
-            src="/images/egg.gif"
-            alt="egg"
-            width="250" height="250"
-          />
-
           <h2>PRICING</h2>
           <p>In order to reward the early supportive backer, the first #100 and #200 will be valued at 0.02 ETH and 0.04 ETH repectively.</p>
-          <p>Moreover, the one and only special background named flying to the moon, will be randomly appeared on 10 units of SHIBAs among the first 100  units. The earliest you bought, the higher chance to get the special SHIBAs.</p>
+          <p>Moreover, the one and only special background named flying to the moon, will be randomly appeared on 10 units of SHIBAs among the first 100 units. The earliest you bought, the higher chance to get the special SHIBAs.</p>
           
           <ul>
             <li>#000 - #019: Reserved for people who helped along the way</li>
@@ -204,10 +216,11 @@ class App extends React.Component {
           </ul>
 
           <h2>SHIBAs PRESALE (15.05.21)</h2>
-          <p>SHIBAs PRESALE will be started on 15th of May. SHIBAs are shy, when the time you bought, they are hidden. They will only be shown up until boxing day.</p>
+          <p>SHIBAs PRESALE will be started on 15th of May. SHIBAs are still in incubating proccess when the time you bought. They will only be hatched out on incubation day.</p>
 
-          <h2>BOXING DAY (15.06.21)</h2>
-          <p>Although Christmas is yet to come, the SHIBAs boxing day is coming soon. 15th of June is the first big day, all sold hidden SHIBA NFTs will be revealed on that day.</p>
+          <h2>INCUBATION DAY (15.06.21)</h2>
+          {/* Although Christmas is yet to come, the SHIBAs boxing day is coming soon.  */}
+          <p>15th of June is the first big day, all sold hidden SHIBAs digi-egg NFTs will be revealed on that day. Those SHIBAs doge-mon will be hatched out one by one from the digi-egg.</p>
 
           <h2>SHIBAs PROPERTIES</h2>
           <ul>
@@ -222,7 +235,7 @@ class App extends React.Component {
           </ul>
 
           <h2>PROVENANCE</h2>
-          <p>As an NFT project, a final proof is hardcoded in our ERC-721 smart contract. The proof is a root hash of all the 1,000 SHIBAs image hashes using the SHA-256 algorithm concatenated in sequential order of their IDs. It assures immutability. No one will be able to mess with the original images without notice.</p>
+          <p>As an NFT project, a final proof is hardcoded in our ERC-721 smart contract. The proof is a root hash of all the 1,000 SHIBAs properties hashes using the SHA-256 algorithm concatenated in sequential order of their IDs. It assures immutability. No one will be able to mess with the original images without notice.</p>
           <p>This project hugely inspired by a number of successful projects, especially NEKO, Pixils, and Chubbies. A 2D pixel-like style and animated GIF are the key elements, which I will keep those features in this project.</p>
 
           <h2>ABOUT ME</h2>
@@ -230,36 +243,52 @@ class App extends React.Component {
             width={['100%']}
             sx={{
               display: 'flex',
-              // justifyContent: 'center',
             }}
           >
-            <NextImage
-              src="/images/profile.png"
-              alt="profile"
-              width="180" height="180"
-            />
+            <Box
+              width={['30%', '25%', '20%']}
+              sx={{
+                alignSelf: 'center',
+              }}
+            >
+              <NextImage
+                src="/images/profile.png"
+                alt="profile"
+                width="180" height="180"
+              />
+            </Box>
             
-            <Box ml={3}>
+            <Box
+              width={['70%', '75%', '80%']}
+              ml={3}>
               <h3>KETHER</h3>
               <p>A new DEFI guy who has passtionate in tech, and belives blockchain will eventually disrupt all existing market and bring innovation to the new market.</p>
             </Box>
 
           </Box>
-          
+
+          <h4>Twitter: <a href="https://twitter.com/shibanft">@SHIBA_NFT</a></h4>
+          <h4>Discord: <a href="https://discord.gg/CTu99xZ8EB">https://discord.gg/CTu99xZ8EB</a></h4>
 
           <h2>FAQ</h2>
           
           <h3>What can I get started to buy NFT?</h3>
           <p>You can either download a crypto wallet in app store or install a browser extension. Deposit with ETH via tools like Coinbase Pro or PayPal. Finally, you can buy the adorable SHIBA NFT as simply as clicking the button on the Sticky banner and approving the transaction!</p>
 
-          <h3>What is the BOXING DAY?</h3>
-          <p>Since all SHIBAs are hidden when the time you bought, they will only be shown up after boxing day. So BOXING DAY is our big day.</p>
+          <h3>What is the INCUBATION DAY?</h3>
+          <p>Since all SHIBAs are hidden inside the digi-egg when the time you bought, they will only be hatched out after incubation day. So INCUBATION DAY is our first big day.</p>
           
           <h3>Where can I trade my SHIBAs?</h3>
-          <p>SHIBAs are built upon ERC-721 protocol and attached on Etherum Blockchain. So you can trade on all etherurm marketplaces, such as <a href="https://opensea.io/">OpenSea</a>.</p>
+          <p>SHIBAs are built upon ERC-721 standard and attached on Etherum Blockchain. So you can trade on all etherurm marketplaces, such as <a href="https://opensea.io/">OpenSea</a>.</p>
           
           <h3>What can I do with my SHIBAs?</h3>
-          <p>You are the owner of your unique SHIBAs as the ownership is already marked on the Etherum Blockchain. So you are free to do anything with them.</p>
+          <p>You are the sole owner of your unique SHIBAs as the ownership is already marked on the Etherum Blockchain. So you are free to do anything with them.</p>
+
+          <h3>Related Links</h3>
+          <p>Twitter: <a href="">@SHIBA_NFT</a></p>
+          <p>Discord: <a href="https://discord.gg/CTu99xZ8EB">https://discord.gg/CTu99xZ8EB</a></p>
+          <p>Opensea: <a href="https://testnets.opensea.io/assets/0xb8709643c4f51b1f57a2932ede09c0a76fc2a414/1">https://testnets.opensea.io/collection/shiba-official</a></p>
+          <p>Contract: <a href="https://rinkeby.etherscan.io/address/0xB8709643C4F51B1F57A2932ede09C0A76fc2a414">0xB8709643C4F51B1F57A2932ede09C0A76fc2a414</a></p>
           
           <Modal
               mb={4}
@@ -317,6 +346,7 @@ class App extends React.Component {
                 </DialogBox>
               )
             }
+
         </Content>
       </Container>
     )

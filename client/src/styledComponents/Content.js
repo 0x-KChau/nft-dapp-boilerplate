@@ -29,12 +29,21 @@ const Div = styled(Box)`
     margin-top: 5%;
   }
 
+  & > h3, h4 {
+    margin: 2% 0;
+  }
+
   & > ol > li {
     line-height: 2;
   }
 
   & > ul > li {
     line-height: 2;
+  }
+
+  & > div > div> button {
+    margin-top: 3%;
+
   }
 `;
 
