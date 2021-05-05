@@ -239,9 +239,10 @@ class App extends React.Component {
               width="180" height="180"
             />
             
-            <Box m={3} />
-
-            <p>A new DEFI guy who has passtionate in tech, and belives blockchain will eventually disrupt all existing market and bring innovation to the new market.</p>
+            <Box ml={3}>
+              <h3>KETHER</h3>
+              <p>A new DEFI guy who has passtionate in tech, and belives blockchain will eventually disrupt all existing market and bring innovation to the new market.</p>
+            </Box>
 
           </Box>
           
