@@ -159,6 +159,13 @@ class App extends React.Component {
             rel="icon"
             type="image/png"
           />
+          <script dangerouslySetInnerHTML={{ __html: `!function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(arguments)};
+            d=s.createElement(q);d.src='//d1l6p2sc9645hc.cloudfront.net/gosquared.js';q=
+            s.getElementsByTagName(q)[0];q.parentNode.insertBefore(d,q)}(window,document
+            ,'script','_gs');
+
+            _gs('GSN-771913-J');
+            _gs('set', 'anonymizeIP', true);` }} />
         </Head>
 
         <Content width={['100%', '90%', '80%', '70%']}>
@@ -205,8 +212,8 @@ class App extends React.Component {
           </ol>
 
           <h2>PRICING</h2>
-          <p>In order to reward the early supportive backer, the first #100 and #200 will be valued at 0.02 ETH and 0.04 ETH repectively.</p>
-          <p>Moreover, the one and only special background named flying to the moon, will be randomly appeared on 10 units of SHIBAs among the first 100 units. The earliest you bought, the higher chance to get the special SHIBAs.</p>
+          <p>In order to reward the early supportive backer, the first #100 and #200 will be valued at 0.02 ETH and 0.04 ETH respectively.</p>
+          <p>Moreover, the only special background named flying to the moon will randomly appear on 10 units of SHIBAs among the first 100 units. The earliest you bought, the higher chance to get the special SHIBAs.</p>
           
           <ul>
             <li>#000 - #019: Reserved for people who helped along the way</li>
@@ -240,11 +247,11 @@ class App extends React.Component {
           />
 
           <h2>SHIBAs PRESALE (20.05.21)</h2>
-          <p>SHIBAs PRESALE will be started on 15th of May. SHIBAs are still in incubating proccess when the time you bought. They will only be hatched out on incubation day.</p>
+          <p>SHIBAs PRESALE will be started on 20th of May. SHIBAs are still in incubating proccess when the time you bought. They will only be hatched out on incubation day.</p>
 
           <h2>INCUBATION DAY (15.06.21)</h2>
           {/* Although Christmas is yet to come, the SHIBAs boxing day is coming soon.  */}
-          <p>15th of June is the first big day, all sold hidden SHIBAs digi-egg NFTs will be revealed on that day. Those SHIBAs doge-mon will be hatched out one by one from the digi-egg.</p>
+          <p>15th of June is the first big day, all sold hidden SHIBAs Digi-egg NFTs will be revealed on that day. Those SHIBAs doge-mon will be hatched out one by one from the Digi-egg.</p>
 
           <h2>SHIBAs TRAIT TYPES</h2>
           <ul>
@@ -283,7 +290,7 @@ class App extends React.Component {
               width={['70%', '75%', '80%']}
               ml={3}>
               <h3>KETHER</h3>
-              <p>A new DEFI guy who has passtionate in tech, and belives blockchain will eventually disrupt all existing market and bring innovation to the new market.</p>
+              <p>A new DEFI guy passionate about tech believes blockchain will eventually disrupt all existing markets and bring innovation to the new market.</p>
             </Box>
 
           </Box>
@@ -294,13 +301,13 @@ class App extends React.Component {
           <h2>FAQ</h2>
           
           <h3>What can I get started to buy NFT?</h3>
-          <p>You can either download a crypto wallet in app store or install a browser extension. Deposit with ETH via tools like Coinbase Pro or PayPal. Finally, you can buy the adorable SHIBA NFT as simply as clicking the button on the Sticky banner and approving the transaction!</p>
+          <p>You can either download a crypto wallet in an app store or install a browser extension. Deposit with ETH via tools like Coinbase Pro or PayPal. Finally, you can buy the adorable SHIBA NFT simply by clicking the button on the Sticky banner and approving the transaction!</p>
 
           <h3>What is the INCUBATION DAY?</h3>
-          <p>Since all SHIBAs are hidden inside the digi-egg when the time you bought, they will only be hatched out after incubation day. So INCUBATION DAY is our first big day.</p>
+          <p>Since all SHIBAs are hidden inside the Digi-egg when the time you bought, they will only be hatched out after incubation day. So INCUBATION DAY is our first big day.</p>
           
           <h3>Where can I trade my SHIBAs?</h3>
-          <p>SHIBAs are built upon ERC-721 standard and attached on Ethereum Blockchain. So you can trade on all etherurm marketplaces, such as <a href="https://opensea.io/">OpenSea</a>.</p>
+          <p>SHIBAs are built upon ERC-721 standard and attached to Ethereum Blockchain. So you can trade on all Etherurm marketplaces, such as <a href="https://opensea.io/">OpenSea</a>.</p>
           
           <h3>What can I do with my SHIBAs?</h3>
           <p>You are the sole owner of your unique SHIBAs as the ownership is already marked on the Ethereum Blockchain. So you are free to do anything with them.</p>
@@ -347,7 +354,7 @@ class App extends React.Component {
                           ? <Button onClick={this.onClickBuy} disabled={isButtonLoading} variant={isButtonLoading ? 'disabled' : 'primary'}>
                               BUY
                             </Button>
-                          : <Button onClick={this.onClickStartSale} disabled={isButtonLoading} variant={isButtonLoading ? 'disabled' : 'primary'}>PRESALE STARTED ON 15.05</Button>
+                          : <Button onClick={this.onClickStartSale} disabled={isButtonLoading} variant={isButtonLoading ? 'disabled' : 'primary'}>PRESALE STARTED ON 20.05</Button>
                       }
                       
                     </Box>
