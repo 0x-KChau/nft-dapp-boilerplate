@@ -1,0 +1,37 @@
+{
+        "name": "SHIBA #509",
+        "attributes": [
+            {
+                "trait_type": "Shiba Type",
+                "value": tongue_out_white_shiba
+            },
+            {
+                "trait_type": "Headwear",
+                "value": N/A
+            },
+            {
+                "trait_type": "Bodyware",
+                "value": N/A
+            },
+            {
+                "trait_type": "Tail",
+                "value": ribbon_tail
+            },
+            {
+                "trait_type": "Handy Props",
+                "value": sword
+            },
+            {
+                "trait_type": "Background Props",
+                "value": N/A
+            },
+            {
+                "trait_type": "Accessories",
+                "value": neck_belt
+            },
+            {
+                "trait_type": "Background",
+                "value": blue
+            },
+        ],
+    }

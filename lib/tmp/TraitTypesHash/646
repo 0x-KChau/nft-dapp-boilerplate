@@ -1,0 +1,37 @@
+{
+        "name": "SHIBA #646",
+        "attributes": [
+            {
+                "trait_type": "Shiba Type",
+                "value": tongue_out_white_shiba
+            },
+            {
+                "trait_type": "Headwear",
+                "value": rainsuit_hat
+            },
+            {
+                "trait_type": "Bodyware",
+                "value": rainsuit
+            },
+            {
+                "trait_type": "Tail",
+                "value": ribbon_tail
+            },
+            {
+                "trait_type": "Handy Props",
+                "value": N/A
+            },
+            {
+                "trait_type": "Background Props",
+                "value": N/A
+            },
+            {
+                "trait_type": "Accessories",
+                "value": N/A
+            },
+            {
+                "trait_type": "Background",
+                "value": stary_light
+            },
+        ],
+    }

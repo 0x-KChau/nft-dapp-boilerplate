@@ -1,0 +1,37 @@
+{
+        "name": "SHIBA #306",
+        "attributes": [
+            {
+                "trait_type": "Shiba Type",
+                "value": white_shiba
+            },
+            {
+                "trait_type": "Headwear",
+                "value": rainsuit_hat
+            },
+            {
+                "trait_type": "Bodyware",
+                "value": N/A
+            },
+            {
+                "trait_type": "Tail",
+                "value": stripe_tail
+            },
+            {
+                "trait_type": "Handy Props",
+                "value": magician_stick
+            },
+            {
+                "trait_type": "Background Props",
+                "value": N/A
+            },
+            {
+                "trait_type": "Accessories",
+                "value": tie
+            },
+            {
+                "trait_type": "Background",
+                "value": orange
+            },
+        ],
+    }

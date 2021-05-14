@@ -1,0 +1,37 @@
+{
+        "name": "SHIBA #80",
+        "attributes": [
+            {
+                "trait_type": "Shiba Type",
+                "value": black_shiba
+            },
+            {
+                "trait_type": "Headwear",
+                "value": warrior_helmet
+            },
+            {
+                "trait_type": "Bodyware",
+                "value": cloak_coat
+            },
+            {
+                "trait_type": "Tail",
+                "value": stripe_tail
+            },
+            {
+                "trait_type": "Handy Props",
+                "value": sword
+            },
+            {
+                "trait_type": "Background Props",
+                "value": N/A
+            },
+            {
+                "trait_type": "Accessories",
+                "value": N/A
+            },
+            {
+                "trait_type": "Background",
+                "value": orange
+            },
+        ],
+    }

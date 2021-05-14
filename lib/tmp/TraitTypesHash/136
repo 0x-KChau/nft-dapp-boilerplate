@@ -1,0 +1,37 @@
+{
+        "name": "SHIBA #136",
+        "attributes": [
+            {
+                "trait_type": "Shiba Type",
+                "value": tongue_out_black_shiba
+            },
+            {
+                "trait_type": "Headwear",
+                "value": cloak_hat
+            },
+            {
+                "trait_type": "Bodyware",
+                "value": N/A
+            },
+            {
+                "trait_type": "Tail",
+                "value": N/A
+            },
+            {
+                "trait_type": "Handy Props",
+                "value": N/A
+            },
+            {
+                "trait_type": "Background Props",
+                "value": balloon
+            },
+            {
+                "trait_type": "Accessories",
+                "value": tie
+            },
+            {
+                "trait_type": "Background",
+                "value": purple
+            },
+        ],
+    }

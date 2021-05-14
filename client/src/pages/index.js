@@ -16,8 +16,6 @@ const debug = Debug('web:connection.context');
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const isDev = NODE_ENV === 'development';
 
-const coverImg = 'https://nekonft.io/static/banner-768x256-5d5bf2f1b641e30fa4d14ce800526f48.gif'
-
 class App extends React.Component {
   state = {
     balance: undefined,
@@ -168,23 +166,29 @@ class App extends React.Component {
             SHIBA NFT
           </Link>
           <h2>ABOUT SHIBA NFT</h2>
-          <p>Recently a Shiba Land was found in the southern east of Etherum network, there are in total 1000 SHIBAs living there. Similar to Digimon, they are transformed and evolved from a digi-egg.</p>
-
-          <NextImage
-            src="/images/egg.gif"
-            alt="egg"
-            width="250" height="250"
-          />
-
-          {/* <p>No mater who you are, you should heard of diffenet memes about Shiba. She is one of the hottest icon in the internet. As Elon Musk tweeted, "I love dog, and I love meme." Couldn't agree more, so I created these 1000 animated SHIBAs NFT, and bring them to the Etheurm Network. They are adorable, unique, and rare. I can't wait to see how SHIBAs bring fun and joy to all of you.</p> */}
+          
           <p>SHIBA as the name implies, one of the most coolest doge in the universe. This project aims to bring adorable SHIBAs to the Ethereum network with only limited 1000 unit. These 1000 animated SHIBA NFTs are completely unique, rare, and free to buy & sell, yet each can only be owned by one person at a time.</p>
-
+          
           <Image
-            src={coverImg}
+            src="/images/shiba_banner.gif"
             sx={{
               width: [ '100%' ],
               borderRadius: 2,
-              marginBottom: 10
+              marginBottom: 5
+            }}
+          />
+
+          <h2>SHIBA LAND</h2>
+          <p>Recently a Shiba Land was found in the southern east of Ethereum network, there are in total 1000 SHIBAs living there. Similar to Digimon, these adorable SHIBAs are transformed and evolved from a digi-egg.</p>
+          {/* <p>No mater who you are, you should heard of diffenet memes about Shiba. She is one of the hottest icon in the internet. As Elon Musk tweeted, "I love dog, and I love meme." Couldn't agree more, so I created these 1000 animated SHIBAs NFT, and bring them to the Etheurm Network. They are adorable, unique, and rare. I can't wait to see how SHIBAs bring fun and joy to all of you.</p> */}
+
+          <Image
+            src="/images/egg.gif"
+            alt="egg"
+            sx={{
+              width: [ '30%' ],
+              borderRadius: 2,
+              marginBottom: 5
             }}
           />
 
@@ -215,21 +219,41 @@ class App extends React.Component {
             <li>#901 - #999: 1.00 ETH</li>
           </ul>
 
-          <h2>SHIBAs PRESALE (15.05.21)</h2>
+          <h3>Randomly showing some SHIBAs...</h3>
+
+          <Image
+            src="/images/shiba_banner_X.gif"
+            sx={{
+              width: [ '100%' ],
+              borderRadius: 2,
+              marginBottom: 5
+            }}
+          />
+
+          <Image
+            src="/images/shiba_banner_Y.gif"
+            sx={{
+              width: [ '100%' ],
+              borderRadius: 2,
+              marginBottom: 5
+            }}
+          />
+
+          <h2>SHIBAs PRESALE (20.05.21)</h2>
           <p>SHIBAs PRESALE will be started on 15th of May. SHIBAs are still in incubating proccess when the time you bought. They will only be hatched out on incubation day.</p>
 
           <h2>INCUBATION DAY (15.06.21)</h2>
           {/* Although Christmas is yet to come, the SHIBAs boxing day is coming soon.  */}
           <p>15th of June is the first big day, all sold hidden SHIBAs digi-egg NFTs will be revealed on that day. Those SHIBAs doge-mon will be hatched out one by one from the digi-egg.</p>
 
-          <h2>SHIBAs PROPERTIES</h2>
+          <h2>SHIBAs TRAIT TYPES</h2>
           <ul>
             <li>Shiba Type</li>
             <li>Headware</li>
             <li>Bodyware</li>
             <li>Tail</li>
-            <li>Props</li>
-            <li>Costume</li>
+            <li>Handy Props</li>
+            <li>Background Props</li>
             <li>Accessories</li>
             <li>Background</li>
           </ul>
@@ -245,18 +269,15 @@ class App extends React.Component {
               display: 'flex',
             }}
           >
-            <Box
-              width={['30%', '25%', '20%']}
+
+            <Image
+              src="/images/profile.png"
+              alt="profile"
               sx={{
+                width: [ '30%', '25%', '20%', '15%' ],
                 alignSelf: 'center',
               }}
-            >
-              <NextImage
-                src="/images/profile.png"
-                alt="profile"
-                width="180" height="180"
-              />
-            </Box>
+            />
             
             <Box
               width={['70%', '75%', '80%']}
@@ -267,7 +288,7 @@ class App extends React.Component {
 
           </Box>
 
-          <h4>Twitter: <a href="https://twitter.com/shibanft">@SHIBA_NFT</a></h4>
+          <h4>Twitter: <a href="https://twitter.com/SHIBA_NFT">@SHIBA_NFT</a></h4>
           <h4>Discord: <a href="https://discord.gg/CTu99xZ8EB">https://discord.gg/CTu99xZ8EB</a></h4>
 
           <h2>FAQ</h2>
@@ -279,13 +300,13 @@ class App extends React.Component {
           <p>Since all SHIBAs are hidden inside the digi-egg when the time you bought, they will only be hatched out after incubation day. So INCUBATION DAY is our first big day.</p>
           
           <h3>Where can I trade my SHIBAs?</h3>
-          <p>SHIBAs are built upon ERC-721 standard and attached on Etherum Blockchain. So you can trade on all etherurm marketplaces, such as <a href="https://opensea.io/">OpenSea</a>.</p>
+          <p>SHIBAs are built upon ERC-721 standard and attached on Ethereum Blockchain. So you can trade on all etherurm marketplaces, such as <a href="https://opensea.io/">OpenSea</a>.</p>
           
           <h3>What can I do with my SHIBAs?</h3>
-          <p>You are the sole owner of your unique SHIBAs as the ownership is already marked on the Etherum Blockchain. So you are free to do anything with them.</p>
+          <p>You are the sole owner of your unique SHIBAs as the ownership is already marked on the Ethereum Blockchain. So you are free to do anything with them.</p>
 
           <h3>Related Links</h3>
-          <p>Twitter: <a href="">@SHIBA_NFT</a></p>
+          <p>Twitter: <a href="https://twitter.com/SHIBA_NFT">@SHIBA_NFT</a></p>
           <p>Discord: <a href="https://discord.gg/CTu99xZ8EB">https://discord.gg/CTu99xZ8EB</a></p>
           <p>Opensea: <a href="https://testnets.opensea.io/assets/0xb8709643c4f51b1f57a2932ede09c0a76fc2a414/1">https://testnets.opensea.io/collection/shiba-official</a></p>
           <p>Contract: <a href="https://rinkeby.etherscan.io/address/0xB8709643C4F51B1F57A2932ede09C0A76fc2a414">0xB8709643C4F51B1F57A2932ede09C0A76fc2a414</a></p>

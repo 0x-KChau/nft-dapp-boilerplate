@@ -1,0 +1,37 @@
+{
+        "name": "SHIBA #449",
+        "attributes": [
+            {
+                "trait_type": "Shiba Type",
+                "value": brown_shiba
+            },
+            {
+                "trait_type": "Headwear",
+                "value": rainsuit_hat
+            },
+            {
+                "trait_type": "Bodyware",
+                "value": rainsuit
+            },
+            {
+                "trait_type": "Tail",
+                "value": ribbon_tail
+            },
+            {
+                "trait_type": "Handy Props",
+                "value": carrot
+            },
+            {
+                "trait_type": "Background Props",
+                "value": balloon
+            },
+            {
+                "trait_type": "Accessories",
+                "value": neck_belt
+            },
+            {
+                "trait_type": "Background",
+                "value": red
+            },
+        ],
+    }

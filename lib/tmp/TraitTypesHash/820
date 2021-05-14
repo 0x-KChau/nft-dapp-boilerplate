@@ -1,0 +1,37 @@
+{
+        "name": "SHIBA #820",
+        "attributes": [
+            {
+                "trait_type": "Shiba Type",
+                "value": tongue_out_black_shiba
+            },
+            {
+                "trait_type": "Headwear",
+                "value": magic_hat
+            },
+            {
+                "trait_type": "Bodyware",
+                "value": rainsuit
+            },
+            {
+                "trait_type": "Tail",
+                "value": ribbon_tail
+            },
+            {
+                "trait_type": "Handy Props",
+                "value": lollipop
+            },
+            {
+                "trait_type": "Background Props",
+                "value": heart
+            },
+            {
+                "trait_type": "Accessories",
+                "value": neck_belt
+            },
+            {
+                "trait_type": "Background",
+                "value": blue
+            },
+        ],
+    }

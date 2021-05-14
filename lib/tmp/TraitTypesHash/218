@@ -1,0 +1,37 @@
+{
+        "name": "SHIBA #218",
+        "attributes": [
+            {
+                "trait_type": "Shiba Type",
+                "value": white_shiba
+            },
+            {
+                "trait_type": "Headwear",
+                "value": cloak_hat
+            },
+            {
+                "trait_type": "Bodyware",
+                "value": cloak_coat
+            },
+            {
+                "trait_type": "Tail",
+                "value": stripe_tail
+            },
+            {
+                "trait_type": "Handy Props",
+                "value": lollipop
+            },
+            {
+                "trait_type": "Background Props",
+                "value": N/A
+            },
+            {
+                "trait_type": "Accessories",
+                "value": N/A
+            },
+            {
+                "trait_type": "Background",
+                "value": sweet_home
+            },
+        ],
+    }

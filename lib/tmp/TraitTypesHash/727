@@ -1,0 +1,37 @@
+{
+        "name": "SHIBA #727",
+        "attributes": [
+            {
+                "trait_type": "Shiba Type",
+                "value": brown_shiba
+            },
+            {
+                "trait_type": "Headwear",
+                "value": warrior_helmet
+            },
+            {
+                "trait_type": "Bodyware",
+                "value": cloak_coat
+            },
+            {
+                "trait_type": "Tail",
+                "value": ribbon_tail
+            },
+            {
+                "trait_type": "Handy Props",
+                "value": apple
+            },
+            {
+                "trait_type": "Background Props",
+                "value": balloon
+            },
+            {
+                "trait_type": "Accessories",
+                "value": ribbon
+            },
+            {
+                "trait_type": "Background",
+                "value": orange
+            },
+        ],
+    }

@@ -1,0 +1,37 @@
+{
+        "name": "SHIBA #322",
+        "attributes": [
+            {
+                "trait_type": "Shiba Type",
+                "value": black_shiba
+            },
+            {
+                "trait_type": "Headwear",
+                "value": rainsuit_hat
+            },
+            {
+                "trait_type": "Bodyware",
+                "value": N/A
+            },
+            {
+                "trait_type": "Tail",
+                "value": N/A
+            },
+            {
+                "trait_type": "Handy Props",
+                "value": apple
+            },
+            {
+                "trait_type": "Background Props",
+                "value": balloon
+            },
+            {
+                "trait_type": "Accessories",
+                "value": tie
+            },
+            {
+                "trait_type": "Background",
+                "value": purple
+            },
+        ],
+    }

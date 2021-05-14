@@ -1,0 +1,37 @@
+{
+        "name": "SHIBA #925",
+        "attributes": [
+            {
+                "trait_type": "Shiba Type",
+                "value": black_shiba
+            },
+            {
+                "trait_type": "Headwear",
+                "value": N/A
+            },
+            {
+                "trait_type": "Bodyware",
+                "value": cloak_coat
+            },
+            {
+                "trait_type": "Tail",
+                "value": stripe_tail
+            },
+            {
+                "trait_type": "Handy Props",
+                "value": carrot
+            },
+            {
+                "trait_type": "Background Props",
+                "value": balloon
+            },
+            {
+                "trait_type": "Accessories",
+                "value": tie
+            },
+            {
+                "trait_type": "Background",
+                "value": orange
+            },
+        ],
+    }
