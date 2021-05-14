@@ -26,7 +26,7 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.8.3+commit.8d00100c\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"interfaceHash\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"canImplementInterfaceForAddress\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Interface for an ERC1820 implementer, as defined in the https://eips.ethereum.org/EIPS/eip-1820#interface-implementation-erc1820implementerinterface[EIP]. Used by contracts that will be registered as implementers in the {IERC1820Registry}.\",\"kind\":\"dev\",\"methods\":{\"canImplementInterfaceForAddress(bytes32,address)\":{\"details\":\"Returns a special value (`ERC1820_ACCEPT_MAGIC`) if this contract implements `interfaceHash` for `account`. See {IERC1820Registry-setInterfaceImplementer}.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/wc/Program/blockchain/shiba_nft/contracts/utils/introspection/IERC1820Implementer.sol\":\"IERC1820Implementer\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/wc/Program/blockchain/shiba_nft/contracts/utils/introspection/IERC1820Implementer.sol\":{\"keccak256\":\"0xd658a25ce73a588bba55fa518ea79b3a581f14c411fb44a38e78f87e3a09ffcb\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://791297362508954c107c100110591cdd6b973a7257262aaf2630917552672a29\",\"dweb:/ipfs/QmWqXwQa6S9xQXx5oy5TB3N7TmyedVy3sJnfTLWP4jCsbp\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.3+commit.8d00100c\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"interfaceHash\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"canImplementInterfaceForAddress\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Interface for an ERC1820 implementer, as defined in the https://eips.ethereum.org/EIPS/eip-1820#interface-implementation-erc1820implementerinterface[EIP]. Used by contracts that will be registered as implementers in the {IERC1820Registry}.\",\"kind\":\"dev\",\"methods\":{\"canImplementInterfaceForAddress(bytes32,address)\":{\"details\":\"Returns a special value (`ERC1820_ACCEPT_MAGIC`) if this contract implements `interfaceHash` for `account`. See {IERC1820Registry-setInterfaceImplementer}.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/wc/Program/blockchain/shiba-nft/contracts/utils/introspection/IERC1820Implementer.sol\":\"IERC1820Implementer\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/wc/Program/blockchain/shiba-nft/contracts/utils/introspection/IERC1820Implementer.sol\":{\"keccak256\":\"0xd658a25ce73a588bba55fa518ea79b3a581f14c411fb44a38e78f87e3a09ffcb\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://791297362508954c107c100110591cdd6b973a7257262aaf2630917552672a29\",\"dweb:/ipfs/QmWqXwQa6S9xQXx5oy5TB3N7TmyedVy3sJnfTLWP4jCsbp\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
@@ -35,20 +35,20 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "// SPDX-License-Identifier: MIT\n\npragma solidity ^0.8.0;\n\n/**\n * @dev Interface for an ERC1820 implementer, as defined in the\n * https://eips.ethereum.org/EIPS/eip-1820#interface-implementation-erc1820implementerinterface[EIP].\n * Used by contracts that will be registered as implementers in the\n * {IERC1820Registry}.\n */\ninterface IERC1820Implementer {\n    /**\n     * @dev Returns a special value (`ERC1820_ACCEPT_MAGIC`) if this contract\n     * implements `interfaceHash` for `account`.\n     *\n     * See {IERC1820Registry-setInterfaceImplementer}.\n     */\n    function canImplementInterfaceForAddress(bytes32 interfaceHash, address account) external view returns (bytes32);\n}\n",
-  "sourcePath": "/Users/wc/Program/blockchain/shiba_nft/contracts/utils/introspection/IERC1820Implementer.sol",
+  "sourcePath": "/Users/wc/Program/blockchain/shiba-nft/contracts/utils/introspection/IERC1820Implementer.sol",
   "ast": {
-    "absolutePath": "/Users/wc/Program/blockchain/shiba_nft/contracts/utils/introspection/IERC1820Implementer.sol",
+    "absolutePath": "/Users/wc/Program/blockchain/shiba-nft/contracts/utils/introspection/IERC1820Implementer.sol",
     "exportedSymbols": {
       "IERC1820Implementer": [
-        5019
+        5024
       ]
     },
-    "id": 5020,
+    "id": 5025,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 5007,
+        "id": 5012,
         "literals": [
           "solidity",
           "^",
@@ -64,15 +64,15 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "documentation": {
-          "id": 5008,
+          "id": 5013,
           "nodeType": "StructuredDocumentation",
           "src": "58:264:37",
           "text": " @dev Interface for an ERC1820 implementer, as defined in the\n https://eips.ethereum.org/EIPS/eip-1820#interface-implementation-erc1820implementerinterface[EIP].\n Used by contracts that will be registered as implementers in the\n {IERC1820Registry}."
         },
         "fullyImplemented": false,
-        "id": 5019,
+        "id": 5024,
         "linearizedBaseContracts": [
-          5019
+          5024
         ],
         "name": "IERC1820Implementer",
         "nameLocation": "333:19:37",
@@ -80,13 +80,13 @@
         "nodes": [
           {
             "documentation": {
-              "id": 5009,
+              "id": 5014,
               "nodeType": "StructuredDocumentation",
               "src": "359:200:37",
               "text": " @dev Returns a special value (`ERC1820_ACCEPT_MAGIC`) if this contract\n implements `interfaceHash` for `account`.\n See {IERC1820Registry-setInterfaceImplementer}."
             },
             "functionSelector": "249cb3fa",
-            "id": 5018,
+            "id": 5023,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -94,17 +94,17 @@
             "nameLocation": "573:31:37",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 5014,
+              "id": 5019,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 5011,
+                  "id": 5016,
                   "mutability": "mutable",
                   "name": "interfaceHash",
                   "nameLocation": "613:13:37",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5018,
+                  "scope": 5023,
                   "src": "605:21:37",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -113,7 +113,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 5010,
+                    "id": 5015,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "605:7:37",
@@ -126,12 +126,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 5013,
+                  "id": 5018,
                   "mutability": "mutable",
                   "name": "account",
                   "nameLocation": "636:7:37",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5018,
+                  "scope": 5023,
                   "src": "628:15:37",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -140,7 +140,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 5012,
+                    "id": 5017,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "628:7:37",
@@ -156,17 +156,17 @@
               "src": "604:40:37"
             },
             "returnParameters": {
-              "id": 5017,
+              "id": 5022,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 5016,
+                  "id": 5021,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5018,
+                  "scope": 5023,
                   "src": "668:7:37",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -175,7 +175,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 5015,
+                    "id": 5020,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "668:7:37",
@@ -189,32 +189,32 @@
               ],
               "src": "667:9:37"
             },
-            "scope": 5019,
+            "scope": 5024,
             "src": "564:113:37",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 5020,
+        "scope": 5025,
         "src": "323:356:37"
       }
     ],
     "src": "33:647:37"
   },
   "legacyAST": {
-    "absolutePath": "/Users/wc/Program/blockchain/shiba_nft/contracts/utils/introspection/IERC1820Implementer.sol",
+    "absolutePath": "/Users/wc/Program/blockchain/shiba-nft/contracts/utils/introspection/IERC1820Implementer.sol",
     "exportedSymbols": {
       "IERC1820Implementer": [
-        5019
+        5024
       ]
     },
-    "id": 5020,
+    "id": 5025,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 5007,
+        "id": 5012,
         "literals": [
           "solidity",
           "^",
@@ -230,15 +230,15 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "documentation": {
-          "id": 5008,
+          "id": 5013,
           "nodeType": "StructuredDocumentation",
           "src": "58:264:37",
           "text": " @dev Interface for an ERC1820 implementer, as defined in the\n https://eips.ethereum.org/EIPS/eip-1820#interface-implementation-erc1820implementerinterface[EIP].\n Used by contracts that will be registered as implementers in the\n {IERC1820Registry}."
         },
         "fullyImplemented": false,
-        "id": 5019,
+        "id": 5024,
         "linearizedBaseContracts": [
-          5019
+          5024
         ],
         "name": "IERC1820Implementer",
         "nameLocation": "333:19:37",
@@ -246,13 +246,13 @@
         "nodes": [
           {
             "documentation": {
-              "id": 5009,
+              "id": 5014,
               "nodeType": "StructuredDocumentation",
               "src": "359:200:37",
               "text": " @dev Returns a special value (`ERC1820_ACCEPT_MAGIC`) if this contract\n implements `interfaceHash` for `account`.\n See {IERC1820Registry-setInterfaceImplementer}."
             },
             "functionSelector": "249cb3fa",
-            "id": 5018,
+            "id": 5023,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -260,17 +260,17 @@
             "nameLocation": "573:31:37",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 5014,
+              "id": 5019,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 5011,
+                  "id": 5016,
                   "mutability": "mutable",
                   "name": "interfaceHash",
                   "nameLocation": "613:13:37",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5018,
+                  "scope": 5023,
                   "src": "605:21:37",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -279,7 +279,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 5010,
+                    "id": 5015,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "605:7:37",
@@ -292,12 +292,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 5013,
+                  "id": 5018,
                   "mutability": "mutable",
                   "name": "account",
                   "nameLocation": "636:7:37",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5018,
+                  "scope": 5023,
                   "src": "628:15:37",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -306,7 +306,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 5012,
+                    "id": 5017,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "628:7:37",
@@ -322,17 +322,17 @@
               "src": "604:40:37"
             },
             "returnParameters": {
-              "id": 5017,
+              "id": 5022,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 5016,
+                  "id": 5021,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5018,
+                  "scope": 5023,
                   "src": "668:7:37",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -341,7 +341,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 5015,
+                    "id": 5020,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "668:7:37",
@@ -355,14 +355,14 @@
               ],
               "src": "667:9:37"
             },
-            "scope": 5019,
+            "scope": 5024,
             "src": "564:113:37",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 5020,
+        "scope": 5025,
         "src": "323:356:37"
       }
     ],
@@ -374,7 +374,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.0",
-  "updatedAt": "2021-04-29T10:14:00.445Z",
+  "updatedAt": "2021-05-14T12:31:26.655Z",
   "devdoc": {
     "details": "Interface for an ERC1820 implementer, as defined in the https://eips.ethereum.org/EIPS/eip-1820#interface-implementation-erc1820implementerinterface[EIP]. Used by contracts that will be registered as implementers in the {IERC1820Registry}.",
     "kind": "dev",
