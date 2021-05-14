@@ -167,7 +167,7 @@ class App extends React.Component {
           </Link>
           <h2>ABOUT SHIBA NFT</h2>
           
-          <p>SHIBA as the name implies, one of the most coolest doge in the universe. This project aims to bring adorable SHIBAs to the Ethereum network with only limited 1000 unit. These 1000 animated SHIBA NFTs are completely unique, rare, and free to buy & sell, yet each can only be owned by one person at a time.</p>
+          <p>SHIBA as the name implies, one of the most coolest doges in the universe. This project aims to bring adorable SHIBAs to the Ethereum network with only a limited number of 1000 units. These 1000 animated SHIBA NFTs are completely unique, rare, and free to buy & sell, yet each can only be owned by one person at a time.</p>
           
           <Image
             src="/images/shiba_banner.gif"
@@ -179,7 +179,7 @@ class App extends React.Component {
           />
 
           <h2>SHIBA LAND</h2>
-          <p>Recently a Shiba Land was found in the southern east of Ethereum network, there are in total 1000 SHIBAs living there. Similar to Digimon, these adorable SHIBAs are transformed and evolved from a digi-egg.</p>
+          <p>Recently a Shiba Land was found in the southeast of the Ethereum network, there are in total 1000 SHIBAs living there. Similar to Digimon, these adorable SHIBAs are transformed and evolved from a Digi-egg.</p>
           {/* <p>No mater who you are, you should heard of diffenet memes about Shiba. She is one of the hottest icon in the internet. As Elon Musk tweeted, "I love dog, and I love meme." Couldn't agree more, so I created these 1000 animated SHIBAs NFT, and bring them to the Etheurm Network. They are adorable, unique, and rare. I can't wait to see how SHIBAs bring fun and joy to all of you.</p> */}
 
           <Image
@@ -308,7 +308,7 @@ class App extends React.Component {
           <h3>Related Links</h3>
           <p>Twitter: <a href="https://twitter.com/SHIBA_NFT">@SHIBA_NFT</a></p>
           <p>Discord: <a href="https://discord.gg/CTu99xZ8EB">https://discord.gg/CTu99xZ8EB</a></p>
-          <p>Opensea: <a href="https://testnets.opensea.io/assets/0xb8709643c4f51b1f57a2932ede09c0a76fc2a414/1">https://testnets.opensea.io/collection/shiba-official</a></p>
+          <p>Opensea: <a href="https://testnets.opensea.io/collection/shiba">https://testnets.opensea.io/collection/shiba</a></p>
           <p>Contract: <a href="https://rinkeby.etherscan.io/address/0xB8709643C4F51B1F57A2932ede09C0A76fc2a414">0xB8709643C4F51B1F57A2932ede09C0A76fc2a414</a></p>
           
           <Modal
