@@ -9,7 +9,7 @@ const Div = styled(Box)`
     margin: 3% 0;
   }
 
-  & > a {
+  & > h1 > a {
     font-size: 54px;
     text-decoration: none;
     color: black;

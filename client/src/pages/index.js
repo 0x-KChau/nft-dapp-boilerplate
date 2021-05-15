@@ -154,6 +154,8 @@ class App extends React.Component {
         <Head>
           <title>SHIBA NFT</title>
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+          <meta name="description" content="SHIBA, one of the coolest doges in the universe. This project aims to bring adorable SHIBAs to the Ethereum network with only a limited 1000 units." />
+          <meta name="og:title" property="og:title" content="SHIBA NFT, buy and keep an adorable doge home." />
           <link
             href="/static/favicon.png"
             rel="icon"
@@ -169,15 +171,19 @@ class App extends React.Component {
         </Head>
 
         <Content width={['100%', '90%', '80%', '70%']}>
-          <Link href='/'>
-            SHIBA NFT
-          </Link>
+          <h1>
+            <Link href='/'>
+              SHIBA NFT
+            </Link>
+          </h1>
+          
           <h2>ABOUT SHIBA NFT</h2>
           
           <p>SHIBA as the name implies, one of the most coolest doges in the universe. This project aims to bring adorable SHIBAs to the Ethereum network with only a limited number of 1000 units. These 1000 animated SHIBA NFTs are completely unique, rare, and free to buy & sell, yet each can only be owned by one person at a time.</p>
           
           <Image
             src="/images/shiba_banner.gif"
+            alt="shiba_banner"
             sx={{
               width: [ '100%' ],
               borderRadius: 2,
@@ -204,8 +210,8 @@ class App extends React.Component {
             <li>Adorable and unique</li>
             <li>Limited 1000 units supply</li>
             <li>Can only be owned by one person at a time</li>
-            <li>Hidden inside the digi-egg at the time you bought</li>
-            <li>All sold SHIBAs digi-egg will be hatched out on 15th of June</li>
+            <li>Hidden inside the Digi-egg at the time you bought</li>
+            <li>All sold SHIBAs Digi-egg will be hatched out on 15th of June</li>
             <li>No one knows what SHIBAs look like until incubation day</li>
             <li>8 different trait types making SHIBAs the unique doge-mon ever</li>
             <li>A special background will be randomly shown in 10 SHIBAs among the first 100 units</li>
@@ -230,6 +236,7 @@ class App extends React.Component {
 
           <Image
             src="/images/shiba_banner_X.gif"
+            alt="shiba_banner_X"
             sx={{
               width: [ '100%' ],
               borderRadius: 2,
@@ -239,6 +246,7 @@ class App extends React.Component {
 
           <Image
             src="/images/shiba_banner_Y.gif"
+            alt="shiba_banner_Y"
             sx={{
               width: [ '100%' ],
               borderRadius: 2,
