@@ -155,11 +155,11 @@ class App extends React.Component {
           <title>SHIBA NFT</title>
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
           <meta key="description" name="description" content="SHIBA is one of the most fantastic dogs in the universe. This project aims to bring adorable SHIBAs to the Ethereum network with only a limited number of 1000 units." />
-          <meta name="og:title" property="og:title" content="SHIBA NFT, buy and keep an adorable doge home." />
+          {/* <meta name="og:title" property="og:title" content="SHIBA NFT, buy and keep an adorable doge home." />
           <meta key="og:type" name="og:type" content="website" />
           <meta key="og:url" name="og:url" content="http://shibanft.io/" />
           <meta key="og:image" name="og:image" content="/static/favicon.png" />
-          <meta key="og:description" name="og:description" content="SHIBA is one of the most fantastic dogs in the universe. This project aims to bring adorable SHIBAs to the Ethereum network with only a limited number of 1000 units." />
+          <meta key="og:description" name="og:description" content="SHIBA is one of the most fantastic dogs in the universe. This project aims to bring adorable SHIBAs to the Ethereum network with only a limited number of 1000 units." /> */}
           <link
             href="/static/favicon.png"
             rel="icon"
@@ -183,7 +183,7 @@ class App extends React.Component {
           
           <h2>ABOUT SHIBA NFT</h2>
           
-          <p>SHIBA is one of the most fantastic dogs in the universe. This project aims to bring adorable SHIBAs to the Ethereum network with only a limited number of 1000 units. These 1000 animated SHIBA NFTs are unique, rare, and free to buy & sell, yet one person can only own each at a time.</p>
+          <p>SHIBA is one of the most fantastic doges in the universe. This project aims to bring adorable SHIBAs to the Ethereum network with only a limited number of 1000 units. These 1000 animated SHIBA NFTs are unique, rare, and free to buy & sell, yet one person can only own each at a time.</p>
           
           <Image
             src="/images/shiba_banner.gif"
