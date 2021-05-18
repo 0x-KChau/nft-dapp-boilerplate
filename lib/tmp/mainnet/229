@@ -1,0 +1,37 @@
+{
+    "name": "SHIBA #229",
+    "attributes": [
+        {
+            "trait_type": "Shiba Type",
+            "value": "white_shiba"
+        },
+        {
+            "trait_type": "Headwear",
+            "value": "magic_hat"
+        },
+        {
+            "trait_type": "Bodyware",
+            "value": "N/A"
+        },
+        {
+            "trait_type": "Tail",
+            "value": "chekered_tail"
+        },
+        {
+            "trait_type": "Handy Props",
+            "value": "apple"
+        },
+        {
+            "trait_type": "Background Props",
+            "value": "heart"
+        },
+        {
+            "trait_type": "Accessories",
+            "value": "neck_belt"
+        },
+        {
+            "trait_type": "Background",
+            "value": "looking_to_mars"
+        }
+    ]
+}

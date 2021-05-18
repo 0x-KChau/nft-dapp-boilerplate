@@ -1,0 +1,37 @@
+{
+    "name": "SHIBA #288",
+    "attributes": [
+        {
+            "trait_type": "Shiba Type",
+            "value": "tongue_out_white_shiba"
+        },
+        {
+            "trait_type": "Headwear",
+            "value": "warrior_helmet"
+        },
+        {
+            "trait_type": "Bodyware",
+            "value": "cloak_coat"
+        },
+        {
+            "trait_type": "Tail",
+            "value": "chekered_tail"
+        },
+        {
+            "trait_type": "Handy Props",
+            "value": "magician_stick"
+        },
+        {
+            "trait_type": "Background Props",
+            "value": "heart"
+        },
+        {
+            "trait_type": "Accessories",
+            "value": "tie"
+        },
+        {
+            "trait_type": "Background",
+            "value": "red"
+        }
+    ]
+}

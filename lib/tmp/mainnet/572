@@ -1,0 +1,37 @@
+{
+    "name": "SHIBA #572",
+    "attributes": [
+        {
+            "trait_type": "Shiba Type",
+            "value": "brown_shiba"
+        },
+        {
+            "trait_type": "Headwear",
+            "value": "magic_hat"
+        },
+        {
+            "trait_type": "Bodyware",
+            "value": "cloak_coat"
+        },
+        {
+            "trait_type": "Tail",
+            "value": "chekered_tail"
+        },
+        {
+            "trait_type": "Handy Props",
+            "value": "sword"
+        },
+        {
+            "trait_type": "Background Props",
+            "value": "balloon"
+        },
+        {
+            "trait_type": "Accessories",
+            "value": "neck_belt"
+        },
+        {
+            "trait_type": "Background",
+            "value": "blue"
+        }
+    ]
+}

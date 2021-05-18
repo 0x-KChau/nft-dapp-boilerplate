@@ -1,0 +1,37 @@
+{
+    "name": "SHIBA #340",
+    "attributes": [
+        {
+            "trait_type": "Shiba Type",
+            "value": "tongue_out_white_shiba"
+        },
+        {
+            "trait_type": "Headwear",
+            "value": "warrior_helmet"
+        },
+        {
+            "trait_type": "Bodyware",
+            "value": "cloak_coat"
+        },
+        {
+            "trait_type": "Tail",
+            "value": "N/A"
+        },
+        {
+            "trait_type": "Handy Props",
+            "value": "lollipop"
+        },
+        {
+            "trait_type": "Background Props",
+            "value": "balloon"
+        },
+        {
+            "trait_type": "Accessories",
+            "value": "sun_glasses"
+        },
+        {
+            "trait_type": "Background",
+            "value": "red"
+        }
+    ]
+}

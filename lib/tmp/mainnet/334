@@ -1,0 +1,37 @@
+{
+    "name": "SHIBA #334",
+    "attributes": [
+        {
+            "trait_type": "Shiba Type",
+            "value": "tongue_out_white_shiba"
+        },
+        {
+            "trait_type": "Headwear",
+            "value": "N/A"
+        },
+        {
+            "trait_type": "Bodyware",
+            "value": "rainsuit"
+        },
+        {
+            "trait_type": "Tail",
+            "value": "stripe_tail"
+        },
+        {
+            "trait_type": "Handy Props",
+            "value": "apple"
+        },
+        {
+            "trait_type": "Background Props",
+            "value": "balloon"
+        },
+        {
+            "trait_type": "Accessories",
+            "value": "N/A"
+        },
+        {
+            "trait_type": "Background",
+            "value": "orange"
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "name": "SHIBA #977",
+    "attributes": [
+        {
+            "trait_type": "Shiba Type",
+            "value": "tongue_out_white_shiba"
+        },
+        {
+            "trait_type": "Headwear",
+            "value": "rainsuit_hat"
+        },
+        {
+            "trait_type": "Bodyware",
+            "value": "cloak_coat"
+        },
+        {
+            "trait_type": "Tail",
+            "value": "ribbon_tail"
+        },
+        {
+            "trait_type": "Handy Props",
+            "value": "magician_stick"
+        },
+        {
+            "trait_type": "Background Props",
+            "value": "N/A"
+        },
+        {
+            "trait_type": "Accessories",
+            "value": "sun_glasses"
+        },
+        {
+            "trait_type": "Background",
+            "value": "red"
+        }
+    ]
+}

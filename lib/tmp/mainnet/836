@@ -1,0 +1,37 @@
+{
+    "name": "SHIBA #836",
+    "attributes": [
+        {
+            "trait_type": "Shiba Type",
+            "value": "tongue_out_brown_shiba"
+        },
+        {
+            "trait_type": "Headwear",
+            "value": "N/A"
+        },
+        {
+            "trait_type": "Bodyware",
+            "value": "cloak_coat"
+        },
+        {
+            "trait_type": "Tail",
+            "value": "stripe_tail"
+        },
+        {
+            "trait_type": "Handy Props",
+            "value": "lollipop"
+        },
+        {
+            "trait_type": "Background Props",
+            "value": "heart"
+        },
+        {
+            "trait_type": "Accessories",
+            "value": "N/A"
+        },
+        {
+            "trait_type": "Background",
+            "value": "looking_to_mars"
+        }
+    ]
+}

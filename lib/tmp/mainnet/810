@@ -1,0 +1,37 @@
+{
+    "name": "SHIBA #810",
+    "attributes": [
+        {
+            "trait_type": "Shiba Type",
+            "value": "tongue_out_black_shiba"
+        },
+        {
+            "trait_type": "Headwear",
+            "value": "warrior_helmet"
+        },
+        {
+            "trait_type": "Bodyware",
+            "value": "N/A"
+        },
+        {
+            "trait_type": "Tail",
+            "value": "N/A"
+        },
+        {
+            "trait_type": "Handy Props",
+            "value": "magician_stick"
+        },
+        {
+            "trait_type": "Background Props",
+            "value": "N/A"
+        },
+        {
+            "trait_type": "Accessories",
+            "value": "ribbon"
+        },
+        {
+            "trait_type": "Background",
+            "value": "red"
+        }
+    ]
+}

@@ -9,9 +9,9 @@ contract Shibas is ERC721EnumerableNew, Ownable {
     // Maximum amount of Shibas in existance. Ever.
     uint public constant MAX_SHIBA_SUPPLY = 1000;
 
-    // The provenance hash of all Shibas. (Root hash of all Shiba Properties hashes concatenated)
+    // The provenance hash of all Shibas. (Root hash of all 1000 Shiba properties hashes concatenated)
     string public constant METADATA_PROVENANCE_HASH =
-        "82c4519ea8ad9011c5c4cfa82c726717fa985fc8679e5bfec3ab8e8a9e2b8739";
+        "a860602523bb2225a9bb3f4a29e2459338ea5f1785fe5b5f6b61114f4dfd3f3f";
 
     // Sale switch.
     bool public hasSaleStarted = false;

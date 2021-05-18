@@ -218,7 +218,7 @@ class App extends React.Component {
             <li>All sold SHIBAs Digi-egg will be hatched out on 15th of June</li>
             <li>No one knows what SHIBAs look like until incubation day</li>
             <li>8 different trait types making SHIBAs the unique doge-mon ever</li>
-            <li>A special background will be randomly shown in 10 SHIBAs among the first 100 units</li>
+            <li>A special background will be randomly shown in 5 SHIBAs among the first 100 units</li>
           </ol>
 
           <h2>PRICING</h2>
@@ -258,8 +258,8 @@ class App extends React.Component {
             }}
           />
 
-          <h2>SHIBAs PRESALE (20.05.21)</h2>
-          <p>SHIBAs PRESALE will be started on 20th of May. SHIBAs are still in incubating proccess when the time you bought. They will only be hatched out on incubation day.</p>
+          <h2>SHIBAs PRESALE (01.06.21)</h2>
+          <p>SHIBAs PRESALE will be started on 1st of June. SHIBAs are still in incubating proccess when the time you bought. They will only be hatched out on incubation day.</p>
 
           <h2>INCUBATION DAY (15.06.21)</h2>
           {/* Although Christmas is yet to come, the SHIBAs boxing day is coming soon.  */}
@@ -366,7 +366,7 @@ class App extends React.Component {
                           ? <Button onClick={this.onClickBuy} disabled={isButtonLoading} variant={isButtonLoading ? 'disabled' : 'primary'}>
                               BUY
                             </Button>
-                          : <Button onClick={this.onClickStartSale} disabled={isButtonLoading} variant={isButtonLoading ? 'disabled' : 'primary'}>PRESALE STARTED ON 20.05</Button>
+                          : <Button onClick={this.onClickStartSale} disabled={isButtonLoading} variant={isButtonLoading ? 'disabled' : 'primary'}>PRESALE STARTED ON 01.06</Button>
                       }
                       
                     </Box>

@@ -1,0 +1,37 @@
+{
+    "name": "SHIBA #118",
+    "attributes": [
+        {
+            "trait_type": "Shiba Type",
+            "value": "white_shiba"
+        },
+        {
+            "trait_type": "Headwear",
+            "value": "cloak_hat"
+        },
+        {
+            "trait_type": "Bodyware",
+            "value": "space_suit"
+        },
+        {
+            "trait_type": "Tail",
+            "value": "chekered_tail"
+        },
+        {
+            "trait_type": "Handy Props",
+            "value": "magician_stick"
+        },
+        {
+            "trait_type": "Background Props",
+            "value": "N/A"
+        },
+        {
+            "trait_type": "Accessories",
+            "value": "ribbon"
+        },
+        {
+            "trait_type": "Background",
+            "value": "orange"
+        }
+    ]
+}

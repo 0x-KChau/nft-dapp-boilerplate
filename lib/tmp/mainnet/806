@@ -1,0 +1,37 @@
+{
+    "name": "SHIBA #806",
+    "attributes": [
+        {
+            "trait_type": "Shiba Type",
+            "value": "black_shiba"
+        },
+        {
+            "trait_type": "Headwear",
+            "value": "rainsuit_hat"
+        },
+        {
+            "trait_type": "Bodyware",
+            "value": "N/A"
+        },
+        {
+            "trait_type": "Tail",
+            "value": "stripe_tail"
+        },
+        {
+            "trait_type": "Handy Props",
+            "value": "carrot"
+        },
+        {
+            "trait_type": "Background Props",
+            "value": "N/A"
+        },
+        {
+            "trait_type": "Accessories",
+            "value": "tie"
+        },
+        {
+            "trait_type": "Background",
+            "value": "looking_to_mars"
+        }
+    ]
+}
