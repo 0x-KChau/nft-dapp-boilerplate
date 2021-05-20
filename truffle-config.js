@@ -18,9 +18,10 @@ module.exports = {
   contracts_build_directory: path.join(__dirname, "client/src/lib/contracts"),
   networks: {
     development: {
-      port: 7545,
+      port: 9545,
       host: "127.0.0.1",
-      network_id: 5777
+      network_id: 5777,
+      gas: 4248490,
     },
     mainnet: {
       provider: function() {
@@ -32,8 +33,11 @@ module.exports = {
           }
         )
       },
+      from: '0x6295c31c892B0723c6cd27fD7B3c7E51F4Dd4fEc',
       network_id: 1,
       websockets: true,
+      gas: 4248490,
+      gasPrice: 100000000000,
       timeoutBlocks: 50000,
       networkCheckTimeout: 1000000
     },
@@ -62,8 +66,43 @@ module.exports = {
           }
         )
       },
+      from: '0xa085C984D0d8B1a4CD8032b60C1FfBBCD1a30d11',
       network_id: 4,
       websockets: true,
+      gas: 4248490,
+      timeoutBlocks: 50000,
+      networkCheckTimeout: 1000000
+    },
+    goerli: {
+      provider: function() {
+        return new HDWalletProvider(
+          {
+            ...options,
+            providerOrUrl: `wss://eth-goerli.ws.alchemyapi.io/v2/${process.env.GOERLI_ID}`,
+            chainId: 5
+          }
+        )
+      },
+      network_id: 5,
+      websockets: true,
+      gas: 4248490,
+      timeoutBlocks: 50000,
+      networkCheckTimeout: 1000000
+    },
+    kovan: {
+      provider: function() {
+        return new HDWalletProvider(
+          {
+            ...options,
+            providerOrUrl: `wss://eth-kovan.ws.alchemyapi.io/v2/${process.env.KOVAN_ID}`,
+            chainId: 42
+          }
+        )
+      },
+      from: '0xa085C984D0d8B1a4CD8032b60C1FfBBCD1a30d11',
+      network_id: 42,
+      websockets: true,
+      gas: 4248490,
       timeoutBlocks: 50000,
       networkCheckTimeout: 1000000
     },

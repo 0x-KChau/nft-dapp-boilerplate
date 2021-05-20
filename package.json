@@ -17,7 +17,7 @@
   },
   "scripts": {
     "deploy": "truffle migrate --network",
-    "etherscan": "truffle run verify Shibas --network",
+    "etherscan": "truffle run verify Shibas@0xa7a53014EBb4615Ad694ADAEb209f3A647915642 --network",
     "updateOpensea": "node ./lib/updateOpensea.js",
     "createMetada": "node ./lib/createMetadataZero.js"
   },

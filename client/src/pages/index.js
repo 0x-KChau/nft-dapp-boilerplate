@@ -327,8 +327,8 @@ class App extends React.Component {
           <h3>Related Links</h3>
           <p>Twitter: <a href="https://twitter.com/SHIBA_NFT">@SHIBA_NFT</a></p>
           <p>Discord: <a href="https://discord.gg/CTu99xZ8EB">https://discord.gg/CTu99xZ8EB</a></p>
-          <p>Opensea: <a href="https://testnets.opensea.io/collection/shiba">https://testnets.opensea.io/collection/shiba</a></p>
-          <p>Contract: <a href="https://rinkeby.etherscan.io/address/0xB8709643C4F51B1F57A2932ede09C0A76fc2a414">0xB8709643C4F51B1F57A2932ede09C0A76fc2a414</a></p>
+          {/* <p>Opensea: <a href="https://opensea.io/collection/shiba">https://opensea.io/collection/shiba</a></p> */}
+          <p>Contract: <a href="https://etherscan.io/address/0xa7a53014EBb4615Ad694ADAEb209f3A647915642">0xa7a53014EBb4615Ad694ADAEb209f3A647915642</a></p>
           
           <Modal
               mb={4}
@@ -336,11 +336,36 @@ class App extends React.Component {
               sx={{
                 display: 'flex',
                 flexDirection: 'column',
+                backgroundColor: isButtonLoading ? '#c7c3c3' : '#f2f2f2',
               }}
             >
               {
                 web3 && accounts && contract
-                  ? <Box>
+                  ? <Box
+                      sx={{
+                        position: 'relative',
+                      }}>
+                      {
+                        isButtonLoading && (
+                          <Box
+                            width={['100%']}
+                            p={3}
+                            sx={{
+                              display: 'flex',
+                              justifyContent: 'center',
+                              position: 'absolute',
+                            }}
+                          >
+                            <Image
+                              src="/images/loading.gif"
+                              alt="loading"
+                              sx={{
+                                width: [ '250px' ],
+                              }}
+                            />
+                          </Box>
+                        )
+                      }
                       <h3>Buy & keep SHIBAs</h3>
                       <h4>
                         Your Wallet: 
