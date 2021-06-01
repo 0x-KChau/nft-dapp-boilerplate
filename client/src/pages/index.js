@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Head from 'next/head'
 import Debug from 'debug';
 import { Box, Button } from 'rebass/styled-components';
-import { Container, Content, Modal, Input, DialogBox } from '../styledComponents'
+import { Container, Content, Modal, Input, DialogBox, Snackbar } from '../styledComponents'
 import { Image } from 'rebass/styled-components'
 import Web3Container from '../lib/Web3Container'
 import { connectWallet } from '../lib/walletConnector';
@@ -29,19 +29,21 @@ class App extends React.Component {
     isToggleDialogBox: false,
     isButtonLoading: false,
     numShibas: 1,
+    networkId: 1,
   };
 
   async componentDidMount() {
     const { accounts, contract, web3 } = this.props;
-    const { shibaKept, totalSupply, hasSaleStarted } = await this._loadContractProperties(contract);
-    this.setState({ accounts, contract, web3, shibaKept, totalSupply, hasSaleStarted });
+    const { shibaKept, totalSupply, hasSaleStarted, networkId } = await this._loadContractProperties(contract, web3);
+    this.setState({ accounts, contract, web3, shibaKept, totalSupply, hasSaleStarted, networkId });
   }
 
-  _loadContractProperties = async (contract) => {
+  _loadContractProperties = async (contract, web3) => {
     const shibaKept = await contract?.methods?.totalSupply()?.call();
     const totalSupply = await contract?.methods?.MAX_SHIBA_SUPPLY()?.call();
     const hasSaleStarted = await contract?.methods?.hasSaleStarted()?.call();
-    return { shibaKept, totalSupply, hasSaleStarted };
+    const networkId = await web3.eth.net.getId();
+    return { shibaKept, totalSupply, hasSaleStarted, networkId };
   }
 
   _unMount = () => {
@@ -147,7 +149,7 @@ class App extends React.Component {
   }
 
   render () {
-    const { isButtonLoading, isToggleDialogBox, shibaKept, numShibas, hasSaleStarted, totalSupply, accounts, contract, web3 } = this.state;
+    const { isButtonLoading, isToggleDialogBox, shibaKept, numShibas, hasSaleStarted, totalSupply, accounts, contract, web3, networkId } = this.state;
 
     return (
       <Container>
@@ -223,7 +225,7 @@ class App extends React.Component {
 
           <h2>PRICING</h2>
           <p>In order to reward the early supportive backer, the first #100 and #200 will be valued at 0.02 ETH and 0.04 ETH respectively.</p>
-          <p>Moreover, the only special background named flying to the moon will randomly appear on 10 units of SHIBAs among the first 100 units. The earliest you bought, the higher chance to get the special SHIBAs.</p>
+          <p>Moreover, The only special background named FLYING TO THE MOON will be randomly generated on 5 SHIBAs among the first 100 units. The earliest you bought, the higher chance to get the special SHIBAs (Rarity: ~0.5%).</p>
           
           <ul>
             <li>#000 - #019: Reserved for people who helped along the way</li>
@@ -409,6 +411,14 @@ class App extends React.Component {
                 <DialogBox>
                   <h4>Congrats, buy & keep our adorable SHIBA successfully!</h4>
                 </DialogBox>
+              )
+            }
+
+            {
+              networkId !== 1 && (
+                <Snackbar>
+                  <h4>Reminder: You are not at the Ethereum Mainnet.</h4>
+                </Snackbar>
               )
             }
 
