@@ -100,7 +100,7 @@ class App extends React.Component {
     const { contract, accounts, web3, numShibas } = this.state;
     const price = this.calShibaPrice();
     const value = (price * numShibas).toString();
-
+    
     try {
       const res = await contract.methods.adoptShibas(numShibas).send({from: accounts[0], value: web3.utils.toWei(value, "ether")});
 
@@ -342,7 +342,7 @@ class App extends React.Component {
               }}
             >
               {
-                web3 && accounts && contract
+                web3 && accounts?.length && contract
                   ? <Box
                       sx={{
                         position: 'relative',
@@ -383,7 +383,7 @@ class App extends React.Component {
                       </h4>
 
                       <h4>
-                        Keep
+                        Buy
                         <Input type="number" min="1" max="10" value={numShibas} onChange={this.onChangeInput} />
                         SHIBAs (Max 10)
                       </h4>
