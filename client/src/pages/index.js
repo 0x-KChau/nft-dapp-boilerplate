@@ -42,7 +42,7 @@ class App extends React.Component {
     const shibaKept = await contract?.methods?.totalSupply()?.call();
     const totalSupply = await contract?.methods?.MAX_SHIBA_SUPPLY()?.call();
     const hasSaleStarted = await contract?.methods?.hasSaleStarted()?.call();
-    const networkId = await web3.eth.net.getId();
+    const networkId = await web3?.eth?.net?.getId();
     return { shibaKept, totalSupply, hasSaleStarted, networkId };
   }
 
@@ -58,7 +58,7 @@ class App extends React.Component {
       //  Enable session (triggers QR Code modal)
       const { accounts, contract, web3 } = await connectWallet();
       
-      const { shibaKept, totalSupply, hasSaleStarted } = await this._loadContractProperties(contract);
+      const { shibaKept, totalSupply, hasSaleStarted } = await this._loadContractProperties(contract, web3);
 
       this.setState({ accounts, contract, web3, shibaKept, totalSupply, hasSaleStarted, isButtonLoading: false });
 
@@ -75,12 +75,12 @@ class App extends React.Component {
       this.setState({ isButtonLoading: true });
 
       try {
-        const { contract, accounts } = this.state;
+        const { contract, accounts, web3 } = this.state;
         
         const res = await contract.methods.startSale().send({ from: accounts[0] });
         
         if (res.status) {
-          const { shibaKept, totalSupply, hasSaleStarted } = await this._loadContractProperties(contract);
+          const { shibaKept, totalSupply, hasSaleStarted } = await this._loadContractProperties(contract, web3);
           this.setState({ hasSaleStarted, shibaKept, totalSupply });
         }
         
@@ -105,7 +105,7 @@ class App extends React.Component {
       const res = await contract.methods.adoptShibas(numShibas).send({from: accounts[0], value: web3.utils.toWei(value, "ether")});
 
       if (res.status) {
-        const { shibaKept, totalSupply } = await this._loadContractProperties(contract);
+        const { shibaKept, totalSupply } = await this._loadContractProperties(contract, web3);
         this.setState({ shibaKept, totalSupply, isToggleDialogBox: true });
       }
 
