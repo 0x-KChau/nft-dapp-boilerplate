@@ -59,8 +59,9 @@ class App extends React.Component {
       const { accounts, contract, web3 } = await connectWallet();
       
       const { shibaKept, totalSupply, hasSaleStarted } = await this._loadContractProperties(contract, web3);
+      const networkId = await web3?.eth?.net?.getId();
 
-      this.setState({ accounts, contract, web3, shibaKept, totalSupply, hasSaleStarted, isButtonLoading: false });
+      this.setState({ networkId, accounts, contract, web3, shibaKept, totalSupply, hasSaleStarted, isButtonLoading: false });
 
     } catch (error) {
       debug('walletConnector connect: ', error);
