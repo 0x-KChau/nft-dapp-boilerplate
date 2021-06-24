@@ -28,12 +28,11 @@ module.exports = {
         return new HDWalletProvider(
           {
             ...options,
-            providerOrUrl: `wss://eth-mainnet.ws.alchemyapi.io/v2/${process.env.MAINNET_ID}`,
+            providerOrUrl: process.env.MAINNET,
             chainId: 1
           }
         )
       },
-      from: '0x6295c31c892B0723c6cd27fD7B3c7E51F4Dd4fEc',
       network_id: 1,
       websockets: true,
       gas: 4248490,
@@ -46,7 +45,7 @@ module.exports = {
         return new HDWalletProvider(
           {
             ...options,
-            providerOrUrl: `wss://eth-ropsten.ws.alchemyapi.io/v2/${process.env.ROPSTEN_ID}`,
+            providerOrUrl: process.env.ROPSTEN,
             chainId: 3
           }
         )
@@ -61,12 +60,11 @@ module.exports = {
         return new HDWalletProvider(
           {
             ...options,
-            providerOrUrl: `wss://eth-rinkeby.ws.alchemyapi.io/v2/${process.env.RINKEBY_ID}`,
+            providerOrUrl: process.env.RINKEBY,
             chainId: 4
           }
         )
       },
-      from: '0xa085C984D0d8B1a4CD8032b60C1FfBBCD1a30d11',
       network_id: 4,
       websockets: true,
       gas: 4248490,
@@ -78,7 +76,7 @@ module.exports = {
         return new HDWalletProvider(
           {
             ...options,
-            providerOrUrl: `wss://eth-goerli.ws.alchemyapi.io/v2/${process.env.GOERLI_ID}`,
+            providerOrUrl: process.env.GOERLI,
             chainId: 5
           }
         )
@@ -94,12 +92,11 @@ module.exports = {
         return new HDWalletProvider(
           {
             ...options,
-            providerOrUrl: `wss://eth-kovan.ws.alchemyapi.io/v2/${process.env.KOVAN_ID}`,
+            providerOrUrl: process.env.KOVAN,
             chainId: 42
           }
         )
       },
-      from: '0xa085C984D0d8B1a4CD8032b60C1FfBBCD1a30d11',
       network_id: 42,
       websockets: true,
       gas: 4248490,

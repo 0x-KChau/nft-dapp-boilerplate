@@ -10,7 +10,7 @@ module.exports = {
   env: {
     INFURA_ID: process.env.INFURA_ID,
     MAINNET_ID: process.env.MAINNET_ID,
-    RINKEBY_ID: process.env.RINKEBY_ID,
-    ROPSTEN_ID: process.env.ROPSTEN_ID
+    RINKEBY_ID: process.env.RINKEBY_ID,//optional
+    ROPSTEN_ID: process.env.ROPSTEN_ID//optional
   }
 }

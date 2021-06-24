@@ -2,7 +2,7 @@ import React from 'react'
 import Debug from 'debug';
 import getWeb3 from './getWeb3'
 import getContract from './getContract'
-import contractShibas from './contracts/Shibas.json'
+import contractNFT from './contracts/NFT.json'
 
 const debug = Debug('web:connection.context');
 
@@ -15,7 +15,7 @@ export default class Web3Container extends React.Component {
 
       if (web3) {
         const accounts = await web3.eth.getAccounts()
-        const contract = await getContract(web3, contractShibas)
+        const contract = await getContract(web3, contractNFT)
         this.setState({ web3, accounts, contract })
       }
 

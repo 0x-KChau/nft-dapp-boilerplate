@@ -1,5 +1,5 @@
-var Shibas = artifacts.require("../contracts/Shibas.sol");
+var ContractNFT = artifacts.require("../contracts/NFT.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(Shibas);
+  deployer.deploy(ContractNFT);
 };
