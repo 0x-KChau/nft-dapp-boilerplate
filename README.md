@@ -11,6 +11,8 @@ It already consists both Contract and Client sides for production usage. It make
 
 
 ## DEV
+`git clone https://github.com/0x-KChau/nft-dapp-boilerplate.git`
+
 ```
 // Create .env file in root directory and add the following variables
 MNEMONIC=
